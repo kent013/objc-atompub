@@ -1,5 +1,5 @@
 #import "WSSEUsernameTokenTest.h"
-#import "../Atompub/WSSEUsernameToken.h"
+#import "WSSEUsernameToken.h"
 
 @implementation WSSEUsernameTokenTest
 - (void) testGenerateUsernameToken

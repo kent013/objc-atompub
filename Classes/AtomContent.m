@@ -7,7 +7,7 @@
   return @"content";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace atom ];
 }
 
@@ -37,16 +37,16 @@
 - (void)setBodyWithString:(NSString *)aBody {
   NSString *div = [ NSString stringWithFormat:@"<div xmlns=\"http://www.w3.org/1999/xhtml\">%@</div>", aBody ];
   BOOL isValid = YES;
-  NSXMLElement *bodyElement =
-    [ [ NSXMLElement alloc ] initWithXMLString:div
+  DDXMLElement *bodyElement =
+    [ [ DDXMLElement alloc ] initWithXMLString:div
                                          error:nil ];
-  NSXMLNode *node, *child;
+  DDXMLNode *node, *child;
   if (bodyElement != nil) {
     int count = [ bodyElement childCount ];
     int i;
     for (i = 0; i < count; i++) {
       child = [ bodyElement childAtIndex:i ];
-      if ([ child kind ] == NSXMLElementKind) {
+      if ([ child kind ] == DDXMLElementKind) {
         node = child;
         break;
       }
@@ -59,13 +59,13 @@
     [ [ self element ] addChild:node ];
     [ self setType:@"xhtml" ];
   } else {
-    [ [ self element ] addChild:[ NSXMLNode textWithStringValue:aBody ] ];
+    [ [ self element ] addChild:[ DDXMLNode textWithStringValue:aBody ] ];
     [ self setType:@"text" ];
     // check start tag
   }
 }
 
-- (void)setBodyWithXMLElement:(NSXMLElement *)aBody {
+- (void)setBodyWithXMLElement:(DDXMLElement *)aBody {
   [ [ self element ] addChild:aBody ];
   [ self setType:@"xhtml" ];
 }

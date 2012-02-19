@@ -30,7 +30,7 @@
   [ coll setCategories:cats ];
   [ w addCollection:coll ];
   NSString *ws = [ w stringValue ];
-  STAssertEqualObjects( ws, @"<workspace xmlns=\"http://www.w3.org/2007/app\"><title xmlns=\"http://www.w3.org/2005/Atom\">workspacetitle</title><collection xmlns=\"http://www.w3.org/2007/app\" href=\"http://example.org/\"><title xmlns=\"http://www.w3.org/2005/Atom\">mytitle</title><accept xmlns=\"http://www.w3.org/2007/app\">image/jpeg</accept><accept xmlns=\"http://www.w3.org/2007/app\">image/png</accept><categories xmlns=\"http://www.w3.org/2007/app\" fixed=\"yes\" href=\"http://example.org/\" scheme=\"foobar\"><category xmlns:atom=\"http://www.w3.org/2005/Atom\" term=\"foo\" label=\"bar\" scheme=\"buz\"></category></categories></collection></workspace>", nil );
+  STAssertEqualObjects( ws, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<workspace xmlns=\"http://www.w3.org/2007/app\"><title xmlns=\"http://www.w3.org/2005/Atom\">workspacetitle</title><collection xmlns=\"http://www.w3.org/2007/app\" href=\"http://example.org/\"><title xmlns=\"http://www.w3.org/2005/Atom\">mytitle</title><accept xmlns=\"http://www.w3.org/2007/app\">image/jpeg</accept><accept xmlns=\"http://www.w3.org/2007/app\">image/png</accept><categories xmlns=\"http://www.w3.org/2007/app\" fixed=\"yes\" href=\"http://example.org/\" scheme=\"foobar\"><category xmlns:atom=\"http://www.w3.org/2005/Atom\" term=\"foo\" label=\"bar\" scheme=\"buz\"></category></categories></collection></workspace>", nil );
 }
 
 

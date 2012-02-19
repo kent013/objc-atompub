@@ -1,0 +1,818 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		793EB6BC14F028950018F220 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED4414F0011700CDEF76 /* NSString+DDXML.m */; };
+		793EB6C014F0B2030018F220 /* ISO8601DateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 793EB6BE14F0B2030018F220 /* ISO8601DateFormatter.h */; };
+		793EB6C114F0B2030018F220 /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 793EB6BF14F0B2030018F220 /* ISO8601DateFormatter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0EC7314EFFFF700CDEF76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D0EC7214EFFFF700CDEF76 /* Foundation.framework */; };
+		79D0EC8414EFFFF700CDEF76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D0EC7214EFFFF700CDEF76 /* Foundation.framework */; };
+		79D0EC8714EFFFF700CDEF76 /* libobjc-atompub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D0EC6F14EFFFF700CDEF76 /* libobjc-atompub.a */; };
+		79D0EC8D14EFFFF700CDEF76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79D0EC8B14EFFFF700CDEF76 /* InfoPlist.strings */; };
+		79D0ECCE14F0004900CDEF76 /* AtomCategories.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0EC9D14F0004900CDEF76 /* AtomCategories.h */; };
+		79D0ECCF14F0004900CDEF76 /* AtomCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0EC9E14F0004900CDEF76 /* AtomCategories.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECD014F0004900CDEF76 /* AtomCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0EC9F14F0004900CDEF76 /* AtomCategory.h */; };
+		79D0ECD114F0004900CDEF76 /* AtomCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECA014F0004900CDEF76 /* AtomCategory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECD214F0004900CDEF76 /* AtomCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECA114F0004900CDEF76 /* AtomCollection.h */; };
+		79D0ECD314F0004900CDEF76 /* AtomCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECA214F0004900CDEF76 /* AtomCollection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECD414F0004900CDEF76 /* AtomContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECA314F0004900CDEF76 /* AtomContent.h */; };
+		79D0ECD514F0004900CDEF76 /* AtomContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECA414F0004900CDEF76 /* AtomContent.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECD614F0004900CDEF76 /* AtomControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECA514F0004900CDEF76 /* AtomControl.h */; };
+		79D0ECD714F0004900CDEF76 /* AtomControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECA614F0004900CDEF76 /* AtomControl.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECD814F0004900CDEF76 /* AtomCoreElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECA714F0004900CDEF76 /* AtomCoreElement.h */; };
+		79D0ECD914F0004900CDEF76 /* AtomCoreElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECA814F0004900CDEF76 /* AtomCoreElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECDA14F0004900CDEF76 /* AtomElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECA914F0004900CDEF76 /* AtomElement.h */; };
+		79D0ECDB14F0004900CDEF76 /* AtomElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECAA14F0004900CDEF76 /* AtomElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECDC14F0004900CDEF76 /* AtomEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECAB14F0004900CDEF76 /* AtomEntry.h */; };
+		79D0ECDD14F0004900CDEF76 /* AtomEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECAC14F0004900CDEF76 /* AtomEntry.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECDE14F0004900CDEF76 /* AtomFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECAD14F0004900CDEF76 /* AtomFeed.h */; };
+		79D0ECDF14F0004900CDEF76 /* AtomFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECAE14F0004900CDEF76 /* AtomFeed.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECE014F0004900CDEF76 /* AtomGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECAF14F0004900CDEF76 /* AtomGenerator.h */; };
+		79D0ECE114F0004900CDEF76 /* AtomGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECB014F0004900CDEF76 /* AtomGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECE214F0004900CDEF76 /* AtomLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECB114F0004900CDEF76 /* AtomLink.h */; };
+		79D0ECE314F0004900CDEF76 /* AtomLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECB214F0004900CDEF76 /* AtomLink.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECE414F0004900CDEF76 /* AtomNamespace.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECB314F0004900CDEF76 /* AtomNamespace.h */; };
+		79D0ECE514F0004900CDEF76 /* AtomNamespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECB414F0004900CDEF76 /* AtomNamespace.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECE614F0004900CDEF76 /* AtomPerson.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECB514F0004900CDEF76 /* AtomPerson.h */; };
+		79D0ECE714F0004900CDEF76 /* AtomPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECB614F0004900CDEF76 /* AtomPerson.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECE814F0004900CDEF76 /* Atompub.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECB714F0004900CDEF76 /* Atompub.h */; };
+		79D0ECE914F0004900CDEF76 /* AtompubCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECB814F0004900CDEF76 /* AtompubCache.h */; };
+		79D0ECEA14F0004900CDEF76 /* AtompubCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECB914F0004900CDEF76 /* AtompubCache.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECEB14F0004900CDEF76 /* AtompubCacheStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECBA14F0004900CDEF76 /* AtompubCacheStorage.h */; };
+		79D0ECEC14F0004900CDEF76 /* AtompubCacheStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECBB14F0004900CDEF76 /* AtompubCacheStorage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECED14F0004900CDEF76 /* AtompubClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECBC14F0004900CDEF76 /* AtompubClient.h */; };
+		79D0ECEE14F0004900CDEF76 /* AtompubClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECBD14F0004900CDEF76 /* AtompubClient.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECEF14F0004900CDEF76 /* AtompubClientDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECBE14F0004900CDEF76 /* AtompubClientDelegate.h */; };
+		79D0ECF014F0004900CDEF76 /* AtompubCredential.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECBF14F0004900CDEF76 /* AtompubCredential.h */; };
+		79D0ECF114F0004900CDEF76 /* AtomService.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECC014F0004900CDEF76 /* AtomService.h */; };
+		79D0ECF214F0004900CDEF76 /* AtomService.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECC114F0004900CDEF76 /* AtomService.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECF314F0004900CDEF76 /* AtomWorkspace.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECC214F0004900CDEF76 /* AtomWorkspace.h */; };
+		79D0ECF414F0004900CDEF76 /* AtomWorkspace.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECC314F0004900CDEF76 /* AtomWorkspace.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECF514F0004900CDEF76 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECC414F0004900CDEF76 /* Base64.h */; };
+		79D0ECF614F0004900CDEF76 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECC514F0004900CDEF76 /* Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECF714F0004900CDEF76 /* BasicCredential.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECC614F0004900CDEF76 /* BasicCredential.h */; };
+		79D0ECF814F0004900CDEF76 /* BasicCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECC714F0004900CDEF76 /* BasicCredential.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECF914F0004900CDEF76 /* W3CDTF.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECC814F0004900CDEF76 /* W3CDTF.h */; };
+		79D0ECFA14F0004900CDEF76 /* W3CDTF.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECC914F0004900CDEF76 /* W3CDTF.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECFB14F0004900CDEF76 /* WSSECredential.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECCA14F0004900CDEF76 /* WSSECredential.h */; };
+		79D0ECFC14F0004900CDEF76 /* WSSECredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECCB14F0004900CDEF76 /* WSSECredential.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ECFD14F0004900CDEF76 /* WSSEUsernameToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECCC14F0004900CDEF76 /* WSSEUsernameToken.h */; };
+		79D0ECFE14F0004900CDEF76 /* WSSEUsernameToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ECCD14F0004900CDEF76 /* WSSEUsernameToken.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		79D0ED1D14F0007500CDEF76 /* AtomCategoriesTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ECFF14F0007500CDEF76 /* AtomCategoriesTest.h */; };
+		79D0ED1F14F0007500CDEF76 /* AtomCategoryTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED0114F0007500CDEF76 /* AtomCategoryTest.h */; };
+		79D0ED2114F0007500CDEF76 /* AtomCollectionTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED0314F0007500CDEF76 /* AtomCollectionTest.h */; };
+		79D0ED2314F0007500CDEF76 /* AtomControlTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED0514F0007500CDEF76 /* AtomControlTest.h */; };
+		79D0ED2514F0007500CDEF76 /* AtomElementTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED0714F0007500CDEF76 /* AtomElementTest.h */; };
+		79D0ED2714F0007500CDEF76 /* AtomEntryTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED0914F0007500CDEF76 /* AtomEntryTest.h */; };
+		79D0ED2914F0007500CDEF76 /* AtomFeedTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED0B14F0007500CDEF76 /* AtomFeedTest.h */; };
+		79D0ED2B14F0007500CDEF76 /* AtomLinkTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED0D14F0007500CDEF76 /* AtomLinkTest.h */; };
+		79D0ED2D14F0007500CDEF76 /* AtomNamespaceTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED0F14F0007500CDEF76 /* AtomNamespaceTest.h */; };
+		79D0ED2F14F0007500CDEF76 /* AtomPersonTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED1114F0007500CDEF76 /* AtomPersonTest.h */; };
+		79D0ED3114F0007500CDEF76 /* AtompubClientTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED1314F0007500CDEF76 /* AtompubClientTest.h */; };
+		79D0ED3314F0007500CDEF76 /* AtomServiceTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED1514F0007500CDEF76 /* AtomServiceTest.h */; };
+		79D0ED3514F0007500CDEF76 /* AtomWorkspaceTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED1714F0007500CDEF76 /* AtomWorkspaceTest.h */; };
+		79D0ED3714F0007500CDEF76 /* W3CDTFTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED1914F0007500CDEF76 /* W3CDTFTest.h */; };
+		79D0ED3914F0007500CDEF76 /* WSSEUsernameTokenTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED1B14F0007500CDEF76 /* WSSEUsernameTokenTest.h */; };
+		79D0ED4E14F0011700CDEF76 /* DDXMLElementAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED4014F0011700CDEF76 /* DDXMLElementAdditions.h */; };
+		79D0ED4F14F0011700CDEF76 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED4114F0011700CDEF76 /* DDXMLElementAdditions.m */; };
+		79D0ED5014F0011700CDEF76 /* NSString+DDXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED4314F0011700CDEF76 /* NSString+DDXML.h */; };
+		79D0ED5114F0011700CDEF76 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED4414F0011700CDEF76 /* NSString+DDXML.m */; };
+		79D0ED5214F0011700CDEF76 /* DDXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED4514F0011700CDEF76 /* DDXML.h */; };
+		79D0ED5314F0011700CDEF76 /* DDXMLDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED4614F0011700CDEF76 /* DDXMLDocument.h */; };
+		79D0ED5414F0011700CDEF76 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED4714F0011700CDEF76 /* DDXMLDocument.m */; };
+		79D0ED5514F0011700CDEF76 /* DDXMLElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED4814F0011700CDEF76 /* DDXMLElement.h */; };
+		79D0ED5614F0011700CDEF76 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED4914F0011700CDEF76 /* DDXMLElement.m */; };
+		79D0ED5714F0011700CDEF76 /* DDXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED4A14F0011700CDEF76 /* DDXMLNode.h */; };
+		79D0ED5814F0011700CDEF76 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED4B14F0011700CDEF76 /* DDXMLNode.m */; };
+		79D0ED5914F0011700CDEF76 /* DDXMLPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 79D0ED4D14F0011700CDEF76 /* DDXMLPrivate.h */; };
+		79D0ED5D14F003B300CDEF76 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D0ED5C14F003B300CDEF76 /* SenTestingKit.framework */; };
+		79D0ED5F14F00C2E00CDEF76 /* AtomCategoriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED0014F0007500CDEF76 /* AtomCategoriesTest.m */; };
+		79D0ED6114F00C2E00CDEF76 /* AtomCategoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED0214F0007500CDEF76 /* AtomCategoryTest.m */; };
+		79D0ED6314F00C2E00CDEF76 /* AtomCollectionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED0414F0007500CDEF76 /* AtomCollectionTest.m */; };
+		79D0ED6514F00C2E00CDEF76 /* AtomControlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED0614F0007500CDEF76 /* AtomControlTest.m */; };
+		79D0ED6714F00C2E00CDEF76 /* AtomElementTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED0814F0007500CDEF76 /* AtomElementTest.m */; };
+		79D0ED6914F00C2E00CDEF76 /* AtomEntryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED0A14F0007500CDEF76 /* AtomEntryTest.m */; };
+		79D0ED6B14F00C2E00CDEF76 /* AtomFeedTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED0C14F0007500CDEF76 /* AtomFeedTest.m */; };
+		79D0ED6D14F00C2E00CDEF76 /* AtomLinkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED0E14F0007500CDEF76 /* AtomLinkTest.m */; };
+		79D0ED6F14F00C2E00CDEF76 /* AtomNamespaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED1014F0007500CDEF76 /* AtomNamespaceTest.m */; };
+		79D0ED7114F00C2E00CDEF76 /* AtomPersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED1214F0007500CDEF76 /* AtomPersonTest.m */; };
+		79D0ED7314F00C2E00CDEF76 /* AtompubClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED1414F0007500CDEF76 /* AtompubClientTest.m */; };
+		79D0ED7514F00C2E00CDEF76 /* AtomServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED1614F0007500CDEF76 /* AtomServiceTest.m */; };
+		79D0ED7714F00C2E00CDEF76 /* AtomWorkspaceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED1814F0007500CDEF76 /* AtomWorkspaceTest.m */; };
+		79D0ED7914F00C2E00CDEF76 /* W3CDTFTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED1A14F0007500CDEF76 /* W3CDTFTest.m */; };
+		79D0ED7B14F00C2E00CDEF76 /* WSSEUsernameTokenTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0ED1C14F0007500CDEF76 /* WSSEUsernameTokenTest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79D0EC8514EFFFF700CDEF76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79D0EC6614EFFFF700CDEF76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79D0EC6E14EFFFF700CDEF76;
+			remoteInfo = "objc-atompub";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		793EB6BE14F0B2030018F220 /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601DateFormatter.h; sourceTree = "<group>"; };
+		793EB6BF14F0B2030018F220 /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601DateFormatter.m; sourceTree = "<group>"; };
+		79D0EC6F14EFFFF700CDEF76 /* libobjc-atompub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libobjc-atompub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D0EC7214EFFFF700CDEF76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		79D0EC7614EFFFF700CDEF76 /* objc-atompub-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-atompub-Prefix.pch"; sourceTree = "<group>"; };
+		79D0EC7F14EFFFF700CDEF76 /* objc-atompubTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "objc-atompubTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D0EC8A14EFFFF700CDEF76 /* objc-atompubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "objc-atompubTests-Info.plist"; sourceTree = "<group>"; };
+		79D0EC8C14EFFFF700CDEF76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		79D0EC9D14F0004900CDEF76 /* AtomCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomCategories.h; path = Classes/AtomCategories.h; sourceTree = SOURCE_ROOT; };
+		79D0EC9E14F0004900CDEF76 /* AtomCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomCategories.m; path = Classes/AtomCategories.m; sourceTree = SOURCE_ROOT; };
+		79D0EC9F14F0004900CDEF76 /* AtomCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomCategory.h; path = Classes/AtomCategory.h; sourceTree = SOURCE_ROOT; };
+		79D0ECA014F0004900CDEF76 /* AtomCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomCategory.m; path = Classes/AtomCategory.m; sourceTree = SOURCE_ROOT; };
+		79D0ECA114F0004900CDEF76 /* AtomCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomCollection.h; path = Classes/AtomCollection.h; sourceTree = SOURCE_ROOT; };
+		79D0ECA214F0004900CDEF76 /* AtomCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomCollection.m; path = Classes/AtomCollection.m; sourceTree = SOURCE_ROOT; };
+		79D0ECA314F0004900CDEF76 /* AtomContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomContent.h; path = Classes/AtomContent.h; sourceTree = SOURCE_ROOT; };
+		79D0ECA414F0004900CDEF76 /* AtomContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomContent.m; path = Classes/AtomContent.m; sourceTree = SOURCE_ROOT; };
+		79D0ECA514F0004900CDEF76 /* AtomControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomControl.h; path = Classes/AtomControl.h; sourceTree = SOURCE_ROOT; };
+		79D0ECA614F0004900CDEF76 /* AtomControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomControl.m; path = Classes/AtomControl.m; sourceTree = SOURCE_ROOT; };
+		79D0ECA714F0004900CDEF76 /* AtomCoreElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomCoreElement.h; path = Classes/AtomCoreElement.h; sourceTree = SOURCE_ROOT; };
+		79D0ECA814F0004900CDEF76 /* AtomCoreElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomCoreElement.m; path = Classes/AtomCoreElement.m; sourceTree = SOURCE_ROOT; };
+		79D0ECA914F0004900CDEF76 /* AtomElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomElement.h; path = Classes/AtomElement.h; sourceTree = SOURCE_ROOT; };
+		79D0ECAA14F0004900CDEF76 /* AtomElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomElement.m; path = Classes/AtomElement.m; sourceTree = SOURCE_ROOT; };
+		79D0ECAB14F0004900CDEF76 /* AtomEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomEntry.h; path = Classes/AtomEntry.h; sourceTree = SOURCE_ROOT; };
+		79D0ECAC14F0004900CDEF76 /* AtomEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomEntry.m; path = Classes/AtomEntry.m; sourceTree = SOURCE_ROOT; };
+		79D0ECAD14F0004900CDEF76 /* AtomFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomFeed.h; path = Classes/AtomFeed.h; sourceTree = SOURCE_ROOT; };
+		79D0ECAE14F0004900CDEF76 /* AtomFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomFeed.m; path = Classes/AtomFeed.m; sourceTree = SOURCE_ROOT; };
+		79D0ECAF14F0004900CDEF76 /* AtomGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomGenerator.h; path = Classes/AtomGenerator.h; sourceTree = SOURCE_ROOT; };
+		79D0ECB014F0004900CDEF76 /* AtomGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomGenerator.m; path = Classes/AtomGenerator.m; sourceTree = SOURCE_ROOT; };
+		79D0ECB114F0004900CDEF76 /* AtomLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomLink.h; path = Classes/AtomLink.h; sourceTree = SOURCE_ROOT; };
+		79D0ECB214F0004900CDEF76 /* AtomLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomLink.m; path = Classes/AtomLink.m; sourceTree = SOURCE_ROOT; };
+		79D0ECB314F0004900CDEF76 /* AtomNamespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomNamespace.h; path = Classes/AtomNamespace.h; sourceTree = SOURCE_ROOT; };
+		79D0ECB414F0004900CDEF76 /* AtomNamespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomNamespace.m; path = Classes/AtomNamespace.m; sourceTree = SOURCE_ROOT; };
+		79D0ECB514F0004900CDEF76 /* AtomPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomPerson.h; path = Classes/AtomPerson.h; sourceTree = SOURCE_ROOT; };
+		79D0ECB614F0004900CDEF76 /* AtomPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomPerson.m; path = Classes/AtomPerson.m; sourceTree = SOURCE_ROOT; };
+		79D0ECB714F0004900CDEF76 /* Atompub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Atompub.h; path = Classes/Atompub.h; sourceTree = SOURCE_ROOT; };
+		79D0ECB814F0004900CDEF76 /* AtompubCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtompubCache.h; path = Classes/AtompubCache.h; sourceTree = SOURCE_ROOT; };
+		79D0ECB914F0004900CDEF76 /* AtompubCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtompubCache.m; path = Classes/AtompubCache.m; sourceTree = SOURCE_ROOT; };
+		79D0ECBA14F0004900CDEF76 /* AtompubCacheStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtompubCacheStorage.h; path = Classes/AtompubCacheStorage.h; sourceTree = SOURCE_ROOT; };
+		79D0ECBB14F0004900CDEF76 /* AtompubCacheStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtompubCacheStorage.m; path = Classes/AtompubCacheStorage.m; sourceTree = SOURCE_ROOT; };
+		79D0ECBC14F0004900CDEF76 /* AtompubClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtompubClient.h; path = Classes/AtompubClient.h; sourceTree = SOURCE_ROOT; };
+		79D0ECBD14F0004900CDEF76 /* AtompubClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtompubClient.m; path = Classes/AtompubClient.m; sourceTree = SOURCE_ROOT; };
+		79D0ECBE14F0004900CDEF76 /* AtompubClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtompubClientDelegate.h; path = Classes/AtompubClientDelegate.h; sourceTree = SOURCE_ROOT; };
+		79D0ECBF14F0004900CDEF76 /* AtompubCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtompubCredential.h; path = Classes/AtompubCredential.h; sourceTree = SOURCE_ROOT; };
+		79D0ECC014F0004900CDEF76 /* AtomService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomService.h; path = Classes/AtomService.h; sourceTree = SOURCE_ROOT; };
+		79D0ECC114F0004900CDEF76 /* AtomService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomService.m; path = Classes/AtomService.m; sourceTree = SOURCE_ROOT; };
+		79D0ECC214F0004900CDEF76 /* AtomWorkspace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomWorkspace.h; path = Classes/AtomWorkspace.h; sourceTree = SOURCE_ROOT; };
+		79D0ECC314F0004900CDEF76 /* AtomWorkspace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomWorkspace.m; path = Classes/AtomWorkspace.m; sourceTree = SOURCE_ROOT; };
+		79D0ECC414F0004900CDEF76 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64.h; path = Classes/Base64.h; sourceTree = SOURCE_ROOT; };
+		79D0ECC514F0004900CDEF76 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64.m; path = Classes/Base64.m; sourceTree = SOURCE_ROOT; };
+		79D0ECC614F0004900CDEF76 /* BasicCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BasicCredential.h; path = Classes/BasicCredential.h; sourceTree = SOURCE_ROOT; };
+		79D0ECC714F0004900CDEF76 /* BasicCredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BasicCredential.m; path = Classes/BasicCredential.m; sourceTree = SOURCE_ROOT; };
+		79D0ECC814F0004900CDEF76 /* W3CDTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W3CDTF.h; path = Classes/W3CDTF.h; sourceTree = SOURCE_ROOT; };
+		79D0ECC914F0004900CDEF76 /* W3CDTF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = W3CDTF.m; path = Classes/W3CDTF.m; sourceTree = SOURCE_ROOT; };
+		79D0ECCA14F0004900CDEF76 /* WSSECredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSSECredential.h; path = Classes/WSSECredential.h; sourceTree = SOURCE_ROOT; };
+		79D0ECCB14F0004900CDEF76 /* WSSECredential.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSSECredential.m; path = Classes/WSSECredential.m; sourceTree = SOURCE_ROOT; };
+		79D0ECCC14F0004900CDEF76 /* WSSEUsernameToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSSEUsernameToken.h; path = Classes/WSSEUsernameToken.h; sourceTree = SOURCE_ROOT; };
+		79D0ECCD14F0004900CDEF76 /* WSSEUsernameToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSSEUsernameToken.m; path = Classes/WSSEUsernameToken.m; sourceTree = SOURCE_ROOT; };
+		79D0ECFF14F0007500CDEF76 /* AtomCategoriesTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomCategoriesTest.h; path = Tests/AtomCategoriesTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED0014F0007500CDEF76 /* AtomCategoriesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomCategoriesTest.m; path = Tests/AtomCategoriesTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED0114F0007500CDEF76 /* AtomCategoryTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomCategoryTest.h; path = Tests/AtomCategoryTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED0214F0007500CDEF76 /* AtomCategoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomCategoryTest.m; path = Tests/AtomCategoryTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED0314F0007500CDEF76 /* AtomCollectionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomCollectionTest.h; path = Tests/AtomCollectionTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED0414F0007500CDEF76 /* AtomCollectionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomCollectionTest.m; path = Tests/AtomCollectionTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED0514F0007500CDEF76 /* AtomControlTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomControlTest.h; path = Tests/AtomControlTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED0614F0007500CDEF76 /* AtomControlTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomControlTest.m; path = Tests/AtomControlTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED0714F0007500CDEF76 /* AtomElementTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomElementTest.h; path = Tests/AtomElementTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED0814F0007500CDEF76 /* AtomElementTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomElementTest.m; path = Tests/AtomElementTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED0914F0007500CDEF76 /* AtomEntryTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomEntryTest.h; path = Tests/AtomEntryTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED0A14F0007500CDEF76 /* AtomEntryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomEntryTest.m; path = Tests/AtomEntryTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED0B14F0007500CDEF76 /* AtomFeedTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomFeedTest.h; path = Tests/AtomFeedTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED0C14F0007500CDEF76 /* AtomFeedTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomFeedTest.m; path = Tests/AtomFeedTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED0D14F0007500CDEF76 /* AtomLinkTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomLinkTest.h; path = Tests/AtomLinkTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED0E14F0007500CDEF76 /* AtomLinkTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomLinkTest.m; path = Tests/AtomLinkTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED0F14F0007500CDEF76 /* AtomNamespaceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomNamespaceTest.h; path = Tests/AtomNamespaceTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED1014F0007500CDEF76 /* AtomNamespaceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomNamespaceTest.m; path = Tests/AtomNamespaceTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED1114F0007500CDEF76 /* AtomPersonTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomPersonTest.h; path = Tests/AtomPersonTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED1214F0007500CDEF76 /* AtomPersonTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomPersonTest.m; path = Tests/AtomPersonTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED1314F0007500CDEF76 /* AtompubClientTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtompubClientTest.h; path = Tests/AtompubClientTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED1414F0007500CDEF76 /* AtompubClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtompubClientTest.m; path = Tests/AtompubClientTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED1514F0007500CDEF76 /* AtomServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomServiceTest.h; path = Tests/AtomServiceTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED1614F0007500CDEF76 /* AtomServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomServiceTest.m; path = Tests/AtomServiceTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED1714F0007500CDEF76 /* AtomWorkspaceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtomWorkspaceTest.h; path = Tests/AtomWorkspaceTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED1814F0007500CDEF76 /* AtomWorkspaceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtomWorkspaceTest.m; path = Tests/AtomWorkspaceTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED1914F0007500CDEF76 /* W3CDTFTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = W3CDTFTest.h; path = Tests/W3CDTFTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED1A14F0007500CDEF76 /* W3CDTFTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = W3CDTFTest.m; path = Tests/W3CDTFTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED1B14F0007500CDEF76 /* WSSEUsernameTokenTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WSSEUsernameTokenTest.h; path = Tests/WSSEUsernameTokenTest.h; sourceTree = SOURCE_ROOT; };
+		79D0ED1C14F0007500CDEF76 /* WSSEUsernameTokenTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WSSEUsernameTokenTest.m; path = Tests/WSSEUsernameTokenTest.m; sourceTree = SOURCE_ROOT; };
+		79D0ED4014F0011700CDEF76 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
+		79D0ED4114F0011700CDEF76 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		79D0ED4314F0011700CDEF76 /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
+		79D0ED4414F0011700CDEF76 /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
+		79D0ED4514F0011700CDEF76 /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
+		79D0ED4614F0011700CDEF76 /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
+		79D0ED4714F0011700CDEF76 /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
+		79D0ED4814F0011700CDEF76 /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
+		79D0ED4914F0011700CDEF76 /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
+		79D0ED4A14F0011700CDEF76 /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
+		79D0ED4B14F0011700CDEF76 /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
+		79D0ED4D14F0011700CDEF76 /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
+		79D0ED5C14F003B300CDEF76 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79D0EC6C14EFFFF700CDEF76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D0EC7314EFFFF700CDEF76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D0EC7B14EFFFF700CDEF76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D0ED5D14F003B300CDEF76 /* SenTestingKit.framework in Frameworks */,
+				79D0EC8414EFFFF700CDEF76 /* Foundation.framework in Frameworks */,
+				79D0EC8714EFFFF700CDEF76 /* libobjc-atompub.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		793EB6BD14F0B2030018F220 /* ISO8601DateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				793EB6BE14F0B2030018F220 /* ISO8601DateFormatter.h */,
+				793EB6BF14F0B2030018F220 /* ISO8601DateFormatter.m */,
+			);
+			path = ISO8601DateFormatter;
+			sourceTree = "<group>";
+		};
+		79D0EC6414EFFFF700CDEF76 = {
+			isa = PBXGroup;
+			children = (
+				79D0ED3C14F0011700CDEF76 /* Libraries */,
+				79D0EC7414EFFFF700CDEF76 /* objc-atompub */,
+				79D0EC8814EFFFF700CDEF76 /* objc-atompubTests */,
+				79D0EC7114EFFFF700CDEF76 /* Frameworks */,
+				79D0EC7014EFFFF700CDEF76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79D0EC7014EFFFF700CDEF76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79D0EC6F14EFFFF700CDEF76 /* libobjc-atompub.a */,
+				79D0EC7F14EFFFF700CDEF76 /* objc-atompubTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79D0EC7114EFFFF700CDEF76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79D0ED5C14F003B300CDEF76 /* SenTestingKit.framework */,
+				79D0EC7214EFFFF700CDEF76 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79D0EC7414EFFFF700CDEF76 /* objc-atompub */ = {
+			isa = PBXGroup;
+			children = (
+				79D0EC9D14F0004900CDEF76 /* AtomCategories.h */,
+				79D0EC9E14F0004900CDEF76 /* AtomCategories.m */,
+				79D0EC9F14F0004900CDEF76 /* AtomCategory.h */,
+				79D0ECA014F0004900CDEF76 /* AtomCategory.m */,
+				79D0ECA114F0004900CDEF76 /* AtomCollection.h */,
+				79D0ECA214F0004900CDEF76 /* AtomCollection.m */,
+				79D0ECA314F0004900CDEF76 /* AtomContent.h */,
+				79D0ECA414F0004900CDEF76 /* AtomContent.m */,
+				79D0ECA514F0004900CDEF76 /* AtomControl.h */,
+				79D0ECA614F0004900CDEF76 /* AtomControl.m */,
+				79D0ECA714F0004900CDEF76 /* AtomCoreElement.h */,
+				79D0ECA814F0004900CDEF76 /* AtomCoreElement.m */,
+				79D0ECA914F0004900CDEF76 /* AtomElement.h */,
+				79D0ECAA14F0004900CDEF76 /* AtomElement.m */,
+				79D0ECAB14F0004900CDEF76 /* AtomEntry.h */,
+				79D0ECAC14F0004900CDEF76 /* AtomEntry.m */,
+				79D0ECAD14F0004900CDEF76 /* AtomFeed.h */,
+				79D0ECAE14F0004900CDEF76 /* AtomFeed.m */,
+				79D0ECAF14F0004900CDEF76 /* AtomGenerator.h */,
+				79D0ECB014F0004900CDEF76 /* AtomGenerator.m */,
+				79D0ECB114F0004900CDEF76 /* AtomLink.h */,
+				79D0ECB214F0004900CDEF76 /* AtomLink.m */,
+				79D0ECB314F0004900CDEF76 /* AtomNamespace.h */,
+				79D0ECB414F0004900CDEF76 /* AtomNamespace.m */,
+				79D0ECB514F0004900CDEF76 /* AtomPerson.h */,
+				79D0ECB614F0004900CDEF76 /* AtomPerson.m */,
+				79D0ECB714F0004900CDEF76 /* Atompub.h */,
+				79D0ECB814F0004900CDEF76 /* AtompubCache.h */,
+				79D0ECB914F0004900CDEF76 /* AtompubCache.m */,
+				79D0ECBA14F0004900CDEF76 /* AtompubCacheStorage.h */,
+				79D0ECBB14F0004900CDEF76 /* AtompubCacheStorage.m */,
+				79D0ECBC14F0004900CDEF76 /* AtompubClient.h */,
+				79D0ECBD14F0004900CDEF76 /* AtompubClient.m */,
+				79D0ECBE14F0004900CDEF76 /* AtompubClientDelegate.h */,
+				79D0ECBF14F0004900CDEF76 /* AtompubCredential.h */,
+				79D0ECC014F0004900CDEF76 /* AtomService.h */,
+				79D0ECC114F0004900CDEF76 /* AtomService.m */,
+				79D0ECC214F0004900CDEF76 /* AtomWorkspace.h */,
+				79D0ECC314F0004900CDEF76 /* AtomWorkspace.m */,
+				79D0ECC414F0004900CDEF76 /* Base64.h */,
+				79D0ECC514F0004900CDEF76 /* Base64.m */,
+				79D0ECC614F0004900CDEF76 /* BasicCredential.h */,
+				79D0ECC714F0004900CDEF76 /* BasicCredential.m */,
+				79D0ECC814F0004900CDEF76 /* W3CDTF.h */,
+				79D0ECC914F0004900CDEF76 /* W3CDTF.m */,
+				79D0ECCA14F0004900CDEF76 /* WSSECredential.h */,
+				79D0ECCB14F0004900CDEF76 /* WSSECredential.m */,
+				79D0ECCC14F0004900CDEF76 /* WSSEUsernameToken.h */,
+				79D0ECCD14F0004900CDEF76 /* WSSEUsernameToken.m */,
+				79D0EC7514EFFFF700CDEF76 /* Supporting Files */,
+			);
+			path = "objc-atompub";
+			sourceTree = "<group>";
+		};
+		79D0EC7514EFFFF700CDEF76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79D0EC7614EFFFF700CDEF76 /* objc-atompub-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79D0EC8814EFFFF700CDEF76 /* objc-atompubTests */ = {
+			isa = PBXGroup;
+			children = (
+				79D0ECFF14F0007500CDEF76 /* AtomCategoriesTest.h */,
+				79D0ED0014F0007500CDEF76 /* AtomCategoriesTest.m */,
+				79D0ED0114F0007500CDEF76 /* AtomCategoryTest.h */,
+				79D0ED0214F0007500CDEF76 /* AtomCategoryTest.m */,
+				79D0ED0314F0007500CDEF76 /* AtomCollectionTest.h */,
+				79D0ED0414F0007500CDEF76 /* AtomCollectionTest.m */,
+				79D0ED0514F0007500CDEF76 /* AtomControlTest.h */,
+				79D0ED0614F0007500CDEF76 /* AtomControlTest.m */,
+				79D0ED0714F0007500CDEF76 /* AtomElementTest.h */,
+				79D0ED0814F0007500CDEF76 /* AtomElementTest.m */,
+				79D0ED0914F0007500CDEF76 /* AtomEntryTest.h */,
+				79D0ED0A14F0007500CDEF76 /* AtomEntryTest.m */,
+				79D0ED0B14F0007500CDEF76 /* AtomFeedTest.h */,
+				79D0ED0C14F0007500CDEF76 /* AtomFeedTest.m */,
+				79D0ED0D14F0007500CDEF76 /* AtomLinkTest.h */,
+				79D0ED0E14F0007500CDEF76 /* AtomLinkTest.m */,
+				79D0ED0F14F0007500CDEF76 /* AtomNamespaceTest.h */,
+				79D0ED1014F0007500CDEF76 /* AtomNamespaceTest.m */,
+				79D0ED1114F0007500CDEF76 /* AtomPersonTest.h */,
+				79D0ED1214F0007500CDEF76 /* AtomPersonTest.m */,
+				79D0ED1314F0007500CDEF76 /* AtompubClientTest.h */,
+				79D0ED1414F0007500CDEF76 /* AtompubClientTest.m */,
+				79D0ED1514F0007500CDEF76 /* AtomServiceTest.h */,
+				79D0ED1614F0007500CDEF76 /* AtomServiceTest.m */,
+				79D0ED1714F0007500CDEF76 /* AtomWorkspaceTest.h */,
+				79D0ED1814F0007500CDEF76 /* AtomWorkspaceTest.m */,
+				79D0ED1914F0007500CDEF76 /* W3CDTFTest.h */,
+				79D0ED1A14F0007500CDEF76 /* W3CDTFTest.m */,
+				79D0ED1B14F0007500CDEF76 /* WSSEUsernameTokenTest.h */,
+				79D0ED1C14F0007500CDEF76 /* WSSEUsernameTokenTest.m */,
+				79D0EC8914EFFFF700CDEF76 /* Supporting Files */,
+			);
+			path = "objc-atompubTests";
+			sourceTree = "<group>";
+		};
+		79D0EC8914EFFFF700CDEF76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79D0EC8A14EFFFF700CDEF76 /* objc-atompubTests-Info.plist */,
+				79D0EC8B14EFFFF700CDEF76 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79D0ED3C14F0011700CDEF76 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				793EB6BD14F0B2030018F220 /* ISO8601DateFormatter */,
+				79D0ED3D14F0011700CDEF76 /* KissXML */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		79D0ED3D14F0011700CDEF76 /* KissXML */ = {
+			isa = PBXGroup;
+			children = (
+				79D0ED3F14F0011700CDEF76 /* Additions */,
+				79D0ED4214F0011700CDEF76 /* Categories */,
+				79D0ED4C14F0011700CDEF76 /* Private */,
+				79D0ED4514F0011700CDEF76 /* DDXML.h */,
+				79D0ED4614F0011700CDEF76 /* DDXMLDocument.h */,
+				79D0ED4714F0011700CDEF76 /* DDXMLDocument.m */,
+				79D0ED4814F0011700CDEF76 /* DDXMLElement.h */,
+				79D0ED4914F0011700CDEF76 /* DDXMLElement.m */,
+				79D0ED4A14F0011700CDEF76 /* DDXMLNode.h */,
+				79D0ED4B14F0011700CDEF76 /* DDXMLNode.m */,
+			);
+			path = KissXML;
+			sourceTree = "<group>";
+		};
+		79D0ED3F14F0011700CDEF76 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				79D0ED4014F0011700CDEF76 /* DDXMLElementAdditions.h */,
+				79D0ED4114F0011700CDEF76 /* DDXMLElementAdditions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		79D0ED4214F0011700CDEF76 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				79D0ED4314F0011700CDEF76 /* NSString+DDXML.h */,
+				79D0ED4414F0011700CDEF76 /* NSString+DDXML.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		79D0ED4C14F0011700CDEF76 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				79D0ED4D14F0011700CDEF76 /* DDXMLPrivate.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		79D0EC6D14EFFFF700CDEF76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D0ECCE14F0004900CDEF76 /* AtomCategories.h in Headers */,
+				79D0ECD014F0004900CDEF76 /* AtomCategory.h in Headers */,
+				79D0ECD214F0004900CDEF76 /* AtomCollection.h in Headers */,
+				79D0ECD414F0004900CDEF76 /* AtomContent.h in Headers */,
+				79D0ECD614F0004900CDEF76 /* AtomControl.h in Headers */,
+				79D0ECD814F0004900CDEF76 /* AtomCoreElement.h in Headers */,
+				79D0ECDA14F0004900CDEF76 /* AtomElement.h in Headers */,
+				79D0ECDC14F0004900CDEF76 /* AtomEntry.h in Headers */,
+				79D0ECDE14F0004900CDEF76 /* AtomFeed.h in Headers */,
+				79D0ECE014F0004900CDEF76 /* AtomGenerator.h in Headers */,
+				79D0ECE214F0004900CDEF76 /* AtomLink.h in Headers */,
+				79D0ECE414F0004900CDEF76 /* AtomNamespace.h in Headers */,
+				79D0ECE614F0004900CDEF76 /* AtomPerson.h in Headers */,
+				79D0ECE814F0004900CDEF76 /* Atompub.h in Headers */,
+				79D0ECE914F0004900CDEF76 /* AtompubCache.h in Headers */,
+				79D0ECEB14F0004900CDEF76 /* AtompubCacheStorage.h in Headers */,
+				79D0ECED14F0004900CDEF76 /* AtompubClient.h in Headers */,
+				79D0ECEF14F0004900CDEF76 /* AtompubClientDelegate.h in Headers */,
+				79D0ECF014F0004900CDEF76 /* AtompubCredential.h in Headers */,
+				79D0ECF114F0004900CDEF76 /* AtomService.h in Headers */,
+				79D0ECF314F0004900CDEF76 /* AtomWorkspace.h in Headers */,
+				79D0ECF514F0004900CDEF76 /* Base64.h in Headers */,
+				79D0ECF714F0004900CDEF76 /* BasicCredential.h in Headers */,
+				79D0ECF914F0004900CDEF76 /* W3CDTF.h in Headers */,
+				79D0ECFB14F0004900CDEF76 /* WSSECredential.h in Headers */,
+				79D0ECFD14F0004900CDEF76 /* WSSEUsernameToken.h in Headers */,
+				79D0ED1D14F0007500CDEF76 /* AtomCategoriesTest.h in Headers */,
+				79D0ED1F14F0007500CDEF76 /* AtomCategoryTest.h in Headers */,
+				79D0ED2114F0007500CDEF76 /* AtomCollectionTest.h in Headers */,
+				79D0ED2314F0007500CDEF76 /* AtomControlTest.h in Headers */,
+				79D0ED2514F0007500CDEF76 /* AtomElementTest.h in Headers */,
+				79D0ED2714F0007500CDEF76 /* AtomEntryTest.h in Headers */,
+				79D0ED2914F0007500CDEF76 /* AtomFeedTest.h in Headers */,
+				79D0ED2B14F0007500CDEF76 /* AtomLinkTest.h in Headers */,
+				79D0ED2D14F0007500CDEF76 /* AtomNamespaceTest.h in Headers */,
+				79D0ED2F14F0007500CDEF76 /* AtomPersonTest.h in Headers */,
+				79D0ED3114F0007500CDEF76 /* AtompubClientTest.h in Headers */,
+				79D0ED3314F0007500CDEF76 /* AtomServiceTest.h in Headers */,
+				79D0ED3514F0007500CDEF76 /* AtomWorkspaceTest.h in Headers */,
+				79D0ED3714F0007500CDEF76 /* W3CDTFTest.h in Headers */,
+				79D0ED3914F0007500CDEF76 /* WSSEUsernameTokenTest.h in Headers */,
+				79D0ED4E14F0011700CDEF76 /* DDXMLElementAdditions.h in Headers */,
+				79D0ED5014F0011700CDEF76 /* NSString+DDXML.h in Headers */,
+				79D0ED5214F0011700CDEF76 /* DDXML.h in Headers */,
+				79D0ED5314F0011700CDEF76 /* DDXMLDocument.h in Headers */,
+				79D0ED5514F0011700CDEF76 /* DDXMLElement.h in Headers */,
+				79D0ED5714F0011700CDEF76 /* DDXMLNode.h in Headers */,
+				79D0ED5914F0011700CDEF76 /* DDXMLPrivate.h in Headers */,
+				793EB6C014F0B2030018F220 /* ISO8601DateFormatter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		79D0EC6E14EFFFF700CDEF76 /* objc-atompub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79D0EC9314EFFFF700CDEF76 /* Build configuration list for PBXNativeTarget "objc-atompub" */;
+			buildPhases = (
+				79D0EC6B14EFFFF700CDEF76 /* Sources */,
+				79D0EC6C14EFFFF700CDEF76 /* Frameworks */,
+				79D0EC6D14EFFFF700CDEF76 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "objc-atompub";
+			productName = "objc-atompub";
+			productReference = 79D0EC6F14EFFFF700CDEF76 /* libobjc-atompub.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		79D0EC7E14EFFFF700CDEF76 /* objc-atompubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79D0EC9614EFFFF700CDEF76 /* Build configuration list for PBXNativeTarget "objc-atompubTests" */;
+			buildPhases = (
+				79D0EC7A14EFFFF700CDEF76 /* Sources */,
+				79D0EC7B14EFFFF700CDEF76 /* Frameworks */,
+				79D0EC7C14EFFFF700CDEF76 /* Resources */,
+				79D0EC7D14EFFFF700CDEF76 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79D0EC8614EFFFF700CDEF76 /* PBXTargetDependency */,
+			);
+			name = "objc-atompubTests";
+			productName = "objc-atompubTests";
+			productReference = 79D0EC7F14EFFFF700CDEF76 /* objc-atompubTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79D0EC6614EFFFF700CDEF76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 79D0EC6914EFFFF700CDEF76 /* Build configuration list for PBXProject "objc-atompub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 79D0EC6414EFFFF700CDEF76;
+			productRefGroup = 79D0EC7014EFFFF700CDEF76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79D0EC6E14EFFFF700CDEF76 /* objc-atompub */,
+				79D0EC7E14EFFFF700CDEF76 /* objc-atompubTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79D0EC7C14EFFFF700CDEF76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D0EC8D14EFFFF700CDEF76 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79D0EC7D14EFFFF700CDEF76 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79D0EC6B14EFFFF700CDEF76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D0ECCF14F0004900CDEF76 /* AtomCategories.m in Sources */,
+				79D0ECD114F0004900CDEF76 /* AtomCategory.m in Sources */,
+				79D0ECD314F0004900CDEF76 /* AtomCollection.m in Sources */,
+				79D0ECD514F0004900CDEF76 /* AtomContent.m in Sources */,
+				79D0ECD714F0004900CDEF76 /* AtomControl.m in Sources */,
+				79D0ECD914F0004900CDEF76 /* AtomCoreElement.m in Sources */,
+				79D0ECDB14F0004900CDEF76 /* AtomElement.m in Sources */,
+				79D0ECDD14F0004900CDEF76 /* AtomEntry.m in Sources */,
+				79D0ECDF14F0004900CDEF76 /* AtomFeed.m in Sources */,
+				79D0ECE114F0004900CDEF76 /* AtomGenerator.m in Sources */,
+				79D0ECE314F0004900CDEF76 /* AtomLink.m in Sources */,
+				79D0ECE514F0004900CDEF76 /* AtomNamespace.m in Sources */,
+				79D0ECE714F0004900CDEF76 /* AtomPerson.m in Sources */,
+				79D0ECEA14F0004900CDEF76 /* AtompubCache.m in Sources */,
+				79D0ECEC14F0004900CDEF76 /* AtompubCacheStorage.m in Sources */,
+				79D0ECEE14F0004900CDEF76 /* AtompubClient.m in Sources */,
+				79D0ECF214F0004900CDEF76 /* AtomService.m in Sources */,
+				79D0ECF414F0004900CDEF76 /* AtomWorkspace.m in Sources */,
+				79D0ECF614F0004900CDEF76 /* Base64.m in Sources */,
+				79D0ECF814F0004900CDEF76 /* BasicCredential.m in Sources */,
+				79D0ECFA14F0004900CDEF76 /* W3CDTF.m in Sources */,
+				79D0ECFC14F0004900CDEF76 /* WSSECredential.m in Sources */,
+				79D0ECFE14F0004900CDEF76 /* WSSEUsernameToken.m in Sources */,
+				79D0ED4F14F0011700CDEF76 /* DDXMLElementAdditions.m in Sources */,
+				79D0ED5114F0011700CDEF76 /* NSString+DDXML.m in Sources */,
+				79D0ED5414F0011700CDEF76 /* DDXMLDocument.m in Sources */,
+				79D0ED5614F0011700CDEF76 /* DDXMLElement.m in Sources */,
+				79D0ED5814F0011700CDEF76 /* DDXMLNode.m in Sources */,
+				793EB6C114F0B2030018F220 /* ISO8601DateFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D0EC7A14EFFFF700CDEF76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793EB6BC14F028950018F220 /* NSString+DDXML.m in Sources */,
+				79D0ED5F14F00C2E00CDEF76 /* AtomCategoriesTest.m in Sources */,
+				79D0ED6114F00C2E00CDEF76 /* AtomCategoryTest.m in Sources */,
+				79D0ED6314F00C2E00CDEF76 /* AtomCollectionTest.m in Sources */,
+				79D0ED6514F00C2E00CDEF76 /* AtomControlTest.m in Sources */,
+				79D0ED6714F00C2E00CDEF76 /* AtomElementTest.m in Sources */,
+				79D0ED6914F00C2E00CDEF76 /* AtomEntryTest.m in Sources */,
+				79D0ED6B14F00C2E00CDEF76 /* AtomFeedTest.m in Sources */,
+				79D0ED6D14F00C2E00CDEF76 /* AtomLinkTest.m in Sources */,
+				79D0ED6F14F00C2E00CDEF76 /* AtomNamespaceTest.m in Sources */,
+				79D0ED7114F00C2E00CDEF76 /* AtomPersonTest.m in Sources */,
+				79D0ED7314F00C2E00CDEF76 /* AtompubClientTest.m in Sources */,
+				79D0ED7514F00C2E00CDEF76 /* AtomServiceTest.m in Sources */,
+				79D0ED7714F00C2E00CDEF76 /* AtomWorkspaceTest.m in Sources */,
+				79D0ED7914F00C2E00CDEF76 /* W3CDTFTest.m in Sources */,
+				79D0ED7B14F00C2E00CDEF76 /* WSSEUsernameTokenTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79D0EC8614EFFFF700CDEF76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79D0EC6E14EFFFF700CDEF76 /* objc-atompub */;
+			targetProxy = 79D0EC8514EFFFF700CDEF76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		79D0EC8B14EFFFF700CDEF76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79D0EC8C14EFFFF700CDEF76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79D0EC9114EFFFF700CDEF76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lobjc";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		79D0EC9214EFFFF700CDEF76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lobjc";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79D0EC9414EFFFF700CDEF76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/objc_atompub.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-atompub/objc-atompub-Prefix.pch";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		79D0EC9514EFFFF700CDEF76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/objc_atompub.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-atompub/objc-atompub-Prefix.pch";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		79D0EC9714EFFFF700CDEF76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-atompub/objc-atompub-Prefix.pch";
+				INFOPLIST_FILE = "objc-atompubTests/objc-atompubTests-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		79D0EC9814EFFFF700CDEF76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-atompub/objc-atompub-Prefix.pch";
+				INFOPLIST_FILE = "objc-atompubTests/objc-atompubTests-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79D0EC6914EFFFF700CDEF76 /* Build configuration list for PBXProject "objc-atompub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D0EC9114EFFFF700CDEF76 /* Debug */,
+				79D0EC9214EFFFF700CDEF76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79D0EC9314EFFFF700CDEF76 /* Build configuration list for PBXNativeTarget "objc-atompub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D0EC9414EFFFF700CDEF76 /* Debug */,
+				79D0EC9514EFFFF700CDEF76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79D0EC9614EFFFF700CDEF76 /* Build configuration list for PBXNativeTarget "objc-atompubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D0EC9714EFFFF700CDEF76 /* Debug */,
+				79D0EC9814EFFFF700CDEF76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79D0EC6614EFFFF700CDEF76 /* Project object */;
+}

@@ -7,8 +7,7 @@
 - (void)testBuild {
   AtomElement *elem = [ [ AtomElement alloc ] init ];
   NSString *result = [ elem stringValue ];
-  STAssertEqualObjects( result, @"<element xmlns=\"http://www.w3.org/2005/Atom\"></element>", nil );
-  [ elem release ];
+  STAssertEqualObjects( result, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element xmlns=\"http://www.w3.org/2005/Atom\"></element>", nil );
 }
 
 - (void)testAddingElement {
@@ -17,8 +16,7 @@
                      elementName:@"title"
                            value:@"foobar" ];
   NSString *result = [ elem stringValue ];
-  STAssertEqualObjects( result, @"<element xmlns=\"http://www.w3.org/2005/Atom\"><title xmlns=\"http://www.w3.org/2005/Atom\">foobar</title></element>", nil );
-  [ elem release ];
+  STAssertEqualObjects( result, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element xmlns=\"http://www.w3.org/2005/Atom\"><title xmlns=\"http://www.w3.org/2005/Atom\">foobar</title></element>", nil );
 }
 
 - (void)testAddingMultipleElement {
@@ -30,8 +28,7 @@
                      elementName:@"title"
                            value:@"barbuz" ];
   NSString *result = [ elem stringValue ];
-  STAssertEqualObjects( result, @"<element xmlns=\"http://www.w3.org/2005/Atom\"><title xmlns=\"http://www.w3.org/2005/Atom\">foobar</title><title xmlns=\"http://www.w3.org/2005/Atom\">barbuz</title></element>", nil );
-  [ elem release ];
+  STAssertEqualObjects( result, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element xmlns=\"http://www.w3.org/2005/Atom\"><title xmlns=\"http://www.w3.org/2005/Atom\">foobar</title><title xmlns=\"http://www.w3.org/2005/Atom\">barbuz</title></element>", nil );
 }
 
 - (void)testAddingElementWithAttributes {
@@ -44,40 +41,37 @@
                            value:@"foobar"
                       attributes:attrs ];
   NSString *result = [ elem stringValue ];
-  STAssertEqualObjects( result, @"<element xmlns=\"http://www.w3.org/2005/Atom\" foo=\"foofoo\" bar=\"barbar\"><title xmlns=\"http://www.w3.org/2005/Atom\">foobar</title></element>", nil );
-  [ elem release ];
+  STAssertEqualObjects( result, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element xmlns=\"http://www.w3.org/2005/Atom\" foo=\"foofoo\" bar=\"barbar\"><title xmlns=\"http://www.w3.org/2005/Atom\">foobar</title></element>", nil );
 }
 
-- (void)testAddingNSXMLElement {
+- (void)testAddingDDXMLElement {
   AtomElement *elem = [ [ AtomElement alloc ] init ];
-  NSXMLElement *newElement = [ NSXMLElement elementWithName:@"foo" ];
-  [ newElement addChild:[ NSXMLNode textWithStringValue:@"barbuz" ] ];
+  DDXMLElement *newElement = [ DDXMLElement elementWithName:@"foo" ];
+  [ newElement addChild:[ DDXMLNode textWithStringValue:@"barbuz" ] ];
   [ elem addElementWithNamespace:[ AtomNamespace atom ]
                      elementName:@"foo"
                          element:newElement ];
   NSString *result = [ elem stringValue ];
-  STAssertEqualObjects( result, @"<element xmlns=\"http://www.w3.org/2005/Atom\"><foo xmlns=\"http://www.w3.org/2005/Atom\">barbuz</foo></element>", nil );
-  [ elem release ];
+  STAssertEqualObjects( result, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element xmlns=\"http://www.w3.org/2005/Atom\"><foo xmlns=\"http://www.w3.org/2005/Atom\">barbuz</foo></element>", nil );
 }
 
-- (void)testAddingComplexNSXMLElement {
+- (void)testAddingComplexDDXMLElement {
   AtomElement *elem = [ [ AtomElement alloc ] init ];
-  NSXMLElement *newElement = [ NSXMLElement elementWithName:@"foo" ];
-  NSXMLElement *newChild = [ NSXMLElement elementWithName:@"bar" ];
-  [ newChild addChild:[ NSXMLNode textWithStringValue:@"buz" ] ];
+  DDXMLElement *newElement = [ DDXMLElement elementWithName:@"foo" ];
+  DDXMLElement *newChild = [ DDXMLElement elementWithName:@"bar" ];
+  [ newChild addChild:[ DDXMLNode textWithStringValue:@"buz" ] ];
   [ newChild addAttribute:
-    [ NSXMLNode attributeWithName:@"uge"
+    [ DDXMLNode attributeWithName:@"uge"
                       stringValue:@"uga" ] ];
   [ newElement addChild:newChild ];
   [ newElement addAttribute:
-    [ NSXMLNode attributeWithName:@"hoge"
+    [ DDXMLNode attributeWithName:@"hoge"
                       stringValue:@"huga"] ];
   [ elem addElementWithNamespace:[ AtomNamespace atom ]
                      elementName:@"foo"
                          element:newElement];
   NSString *result = [ elem stringValue ];
-  STAssertEqualObjects( result, @"<element xmlns=\"http://www.w3.org/2005/Atom\"><foo xmlns=\"http://www.w3.org/2005/Atom\" hoge=\"huga\"><bar uge=\"uga\">buz</bar></foo></element>", nil );
-  [ elem release ];
+  STAssertEqualObjects( result, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element xmlns=\"http://www.w3.org/2005/Atom\"><foo xmlns=\"http://www.w3.org/2005/Atom\" hoge=\"huga\"><bar uge=\"uga\">buz</bar></foo></element>", nil );
 }
 
 - (void)testRemovingElement {
@@ -88,8 +82,7 @@
   [ elem removeElementsWithNamespace:[ AtomNamespace atom ]
                          elementName:@"title" ];
   NSString *result = [ elem stringValue ];
-  STAssertEqualObjects( result, @"<element xmlns=\"http://www.w3.org/2005/Atom\"></element>", nil );
-  [ elem release ];
+  STAssertEqualObjects( result, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element xmlns=\"http://www.w3.org/2005/Atom\"></element>", nil );
 }
 
 - (void)testSettingElement {
@@ -101,8 +94,7 @@
                      elementName:@"title"
                            value:@"barbuz" ];
   NSString *result = [ elem stringValue ];
-  STAssertEqualObjects( result, @"<element xmlns=\"http://www.w3.org/2005/Atom\"><title xmlns=\"http://www.w3.org/2005/Atom\">barbuz</title></element>", nil );
-  [ elem release ];
+  STAssertEqualObjects( result, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element xmlns=\"http://www.w3.org/2005/Atom\"><title xmlns=\"http://www.w3.org/2005/Atom\">barbuz</title></element>", nil );
 }
 
 - (void)testGettingElements {
@@ -117,11 +109,10 @@
     [ elem getElementsWithNamespace: [ AtomNamespace atom ]
                         elementName: @"title" ];
   STAssertEquals((float)[ results count ], 2.0f, nil );
-  NSXMLElement *first = [ results objectAtIndex:0 ];
+  DDXMLElement *first = [ results objectAtIndex:0 ];
   STAssertEqualObjects( [ first stringValue ], @"foobar", nil );
-  NSXMLElement *second = [ results objectAtIndex:1 ];
+  DDXMLElement *second = [ results objectAtIndex:1 ];
   STAssertEqualObjects( [ second stringValue ], @"barbuz", nil );
-  [ elem release ];
 }
 
 - (void)testGettingElement {
@@ -132,19 +123,17 @@
   [ elem addElementWithNamespace:[ AtomNamespace atom ]
                      elementName:@"title"
                            value:@"barbuz" ];
-  NSXMLElement *first =
+  DDXMLElement *first =
     [ elem getElementWithNamespace: [ AtomNamespace atom ]
                        elementName: @"title" ];
   STAssertEqualObjects( [ first stringValue ], @"foobar", nil );
-  [ elem release ];
 }
 
 - (void)testSettingAttribute {
   AtomElement *elem = [ [ AtomElement alloc ] init ];
   [ elem setAttributeValue:@"bar" forKey:@"foo" ];
   NSString *result = [ elem stringValue ];
-  STAssertEqualObjects( result, @"<element xmlns=\"http://www.w3.org/2005/Atom\" foo=\"bar\"></element>", nil );
-  [ elem release ];
+  STAssertEqualObjects( result, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element xmlns=\"http://www.w3.org/2005/Atom\" foo=\"bar\"></element>", nil );
 }
 
 - (void)testGettingAttribute {
@@ -154,30 +143,28 @@
   STAssertEqualObjects( bar, @"bar", nil );
   NSString *unknown = [ elem getAttributeValueForKey:@"unknown" ];
   STAssertNil(unknown, nil );
-  [ elem release ];
 }
 
 - (void)testParsingElement {
   NSString *elementString = @"<element xmlns=\"http://www.w3.org/2005/Atom\" xmlns:app=\"http://www.w3.org/2007/app\"><title>hoge</title><app:control><app:draft>yes</app:draft></app:control></element>";
   NSError *error;
-  NSXMLElement *xmlElem = [ [ NSXMLElement alloc ] initWithXMLString:elementString
+  DDXMLElement *xmlElem = [ [ DDXMLElement alloc ] initWithXMLString:elementString
                                                                error:&error ];
   //STAssertEqualObjects([error localizedDescription], @"", nil);
   AtomElement *elem = [ [ AtomElement alloc ] initWithXMLElement:xmlElem ];
   STAssertNotNil([ elem element ], nil);
   //NSString *elemResult = [ elem stringValue ];
   //STAssertEqualObjects( elemResult, @"", nil );
-  NSXMLElement *title = [ elem getElementWithNamespace: [ AtomNamespace atom ]
+  DDXMLElement *title = [ elem getElementWithNamespace: [ AtomNamespace atom ]
                                            elementName:@"title" ];
   STAssertNotNil(title, nil);
-  NSXMLElement *control = [ elem getElementWithNamespace: [ AtomNamespace app ]
+  DDXMLElement *control = [ elem getElementWithNamespace: [ AtomNamespace app ]
                                            elementName:@"control" ];
   STAssertNotNil(control, nil);
   NSString *result = [ title stringValue ];
   STAssertEqualObjects( result, @"hoge", nil );
   NSString *result2 = [ control stringValue ];
   STAssertEqualObjects( result2, @"yes", nil );
-  [ elem release ];
 }
 
 @end

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'objc-atompub' target in the 'objc-atompub' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

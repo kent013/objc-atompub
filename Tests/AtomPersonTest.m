@@ -6,8 +6,7 @@
 - (void)testElement {
   AtomPerson *person = [ [ AtomPerson alloc ] init ];
   NSString *personString = [ person stringValue ];
-  STAssertEqualObjects( personString, @"<author xmlns=\"http://www.w3.org/2005/Atom\"></author>", nil );
-  [ person release ];
+  STAssertEqualObjects( personString, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<author xmlns=\"http://www.w3.org/2005/Atom\"></author>", nil );
 }
 
 - (void)testParams {
@@ -16,14 +15,13 @@
   [ person setUri:[NSURL URLWithString:@"http://example.org/" ] ];
   [ person setEmail:@"sample@example.org" ];
   NSString *personString = [ person stringValue ];
-  STAssertEqualObjects( personString, @"<author xmlns=\"http://www.w3.org/2005/Atom\"><name xmlns=\"http://www.w3.org/2005/Atom\">Foo Bar</name><uri xmlns=\"http://www.w3.org/2005/Atom\">http://example.org/</uri><email xmlns=\"http://www.w3.org/2005/Atom\">sample@example.org</email></author>", nil );
+  STAssertEqualObjects( personString, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<author xmlns=\"http://www.w3.org/2005/Atom\"><name xmlns=\"http://www.w3.org/2005/Atom\">Foo Bar</name><uri xmlns=\"http://www.w3.org/2005/Atom\">http://example.org/</uri><email xmlns=\"http://www.w3.org/2005/Atom\">sample@example.org</email></author>", nil );
   NSString *name  = [ person name ];
   NSString *email = [ person email ];
   NSURL    *uri   = [ person uri ];
   STAssertEqualObjects( name,  @"Foo Bar", nil );
   STAssertEqualObjects( email, @"sample@example.org", nil );
   STAssertEqualObjects( [ uri absoluteString ], @"http://example.org/", nil );
-  [ person release ];
 }
 
 - (void)testInsertion {
@@ -39,8 +37,7 @@
                      elementName:@"contributor"
                      atomElement:cont ];
   NSString *result = [ elem stringValue ];
-  STAssertEqualObjects( result, @"<element xmlns=\"http://www.w3.org/2005/Atom\"><author xmlns=\"http://www.w3.org/2005/Atom\"><name xmlns=\"http://www.w3.org/2005/Atom\">Foo</name></author><contributor xmlns=\"http://www.w3.org/2005/Atom\"><name xmlns=\"http://www.w3.org/2005/Atom\">Bar</name></contributor></element>", nil);
-  [ elem release ];
+  STAssertEqualObjects( result, @"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element xmlns=\"http://www.w3.org/2005/Atom\"><author xmlns=\"http://www.w3.org/2005/Atom\"><name xmlns=\"http://www.w3.org/2005/Atom\">Foo</name></author><contributor xmlns=\"http://www.w3.org/2005/Atom\"><name xmlns=\"http://www.w3.org/2005/Atom\">Bar</name></contributor></element>", nil);
 }
 
 @end

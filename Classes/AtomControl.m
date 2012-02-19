@@ -8,7 +8,7 @@
   return @"control";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace app ];
 }
 
@@ -16,7 +16,7 @@
   return [ [ [ AtomControl alloc ] init ] autorelease ]; 
 }
 
-+ (AtomControl *)controlWithXMLElement:(NSXMLElement *)elem {
++ (AtomControl *)controlWithXMLElement:(DDXMLElement *)elem {
   return [ [ [ AtomControl alloc ] initWithXMLElement:elem ] autorelease ]; 
 }
 

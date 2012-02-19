@@ -1,12 +1,13 @@
 #import <Foundation/Foundation.h>
+#import "DDXML.h"
 
 @interface AtomNamespace : NSObject {
 }
-+ (NSXMLNode *)atom;
-+ (NSXMLNode *)atomWithPrefix;
-+ (NSXMLNode *)app;
-+ (NSXMLNode *)appWithPrefix;
-+ (NSXMLNode *)openSearch;
-+ (NSXMLNode *)threading;
++ (DDXMLNode *)atom;
++ (DDXMLNode *)atomWithPrefix;
++ (DDXMLNode *)app;
++ (DDXMLNode *)appWithPrefix;
++ (DDXMLNode *)openSearch;
++ (DDXMLNode *)threading;
 @end
 

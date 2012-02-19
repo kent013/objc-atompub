@@ -8,7 +8,7 @@
   return @"category";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace atom ];
 }
 
@@ -16,7 +16,7 @@
   return [ [ [ AtomCategory alloc ] init ] autorelease ];
 }
 
-+ (AtomCategory *)categoryWithXMLElement:(NSXMLElement *)elem {
++ (AtomCategory *)categoryWithXMLElement:(DDXMLElement *)elem {
   return [ [ [ AtomCategory alloc ] initWithXMLElement:elem ] autorelease ];
 }
 

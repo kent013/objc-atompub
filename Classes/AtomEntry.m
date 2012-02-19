@@ -9,7 +9,7 @@
   return @"entry";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace atom ];
 }
 
@@ -17,7 +17,7 @@
   return [ [ [ AtomEntry alloc ] init ] autorelease ];
 }
 
-+ (AtomEntry *)entryWithXMLElement:(NSXMLElement *)elem {
++ (AtomEntry *)entryWithXMLElement:(DDXMLElement *)elem {
   return [ [ [ AtomEntry alloc ] initWithXMLElement:elem ] autorelease ];
 }
 

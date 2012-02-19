@@ -1,65 +1,66 @@
 #import <Foundation/Foundation.h>
+#import "DDXML.h"
 
 @interface AtomElement : NSObject {
-  NSXMLElement *element;
+  DDXMLElement *element;
 }
 
 
 + (NSString *)elementName;
 
-+ (NSXMLNode *)elementNamespace;
++ (DDXMLNode *)elementNamespace;
 
 - (id)init;
 
 - (id)initWithXMLString:(NSString *)string;
 
-- (id)initWithXMLElement:(NSXMLElement *)elem;
+- (id)initWithXMLElement:(DDXMLElement *)elem;
 
-// XXX: @property(readonly) NSXMLElement *element;
-- (NSXMLElement *)element;
+// XXX: @property(readonly) DDXMLElement *element;
+- (DDXMLElement *)element;
 
-- (NSXMLDocument *)document;
+- (DDXMLDocument *)document;
 
-- (void)addElementWithNamespace:(NSXMLNode *)namespace
+- (void)addElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
                           value:(NSString *)value;
 
-- (void)addElementWithNamespace:(NSXMLNode *)namespace
+- (void)addElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
                           value:(NSString *)value
                      attributes:(NSDictionary *)attributes;
 
-- (void)removeElementsWithNamespace:(NSXMLNode *)namespace
+- (void)removeElementsWithNamespace:(DDXMLNode *)namespace
                         elementName:(NSString *)elementName;
 
-- (void)setElementWithNamespace:(NSXMLNode *)namespace
+- (void)setElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
                           value:(NSString *)value;
 
-- (NSXMLElement *)getElementWithNamespace:(NSXMLNode *)namespace
+- (DDXMLElement *)getElementWithNamespace:(DDXMLNode *)namespace
                               elementName:(NSString *)elementName;
 
-- (NSArray *)getElementsWithNamespace:(NSXMLNode *)namespace
+- (NSArray *)getElementsWithNamespace:(DDXMLNode *)namespace
                           elementName:(NSString *)elementName;
 
-- (NSArray *)getElementsTextStringWithNamespace:(NSXMLNode *)namespace
+- (NSArray *)getElementsTextStringWithNamespace:(DDXMLNode *)namespace
                                     elementName:(NSString *)elementName;
-- (NSString *)getElementTextStringWithNamespace:(NSXMLNode *)namespace
+- (NSString *)getElementTextStringWithNamespace:(DDXMLNode *)namespace
                                     elementName:(NSString *)elementName;
 
-- (void)addElementWithNamespace:(NSXMLNode *)namespace
+- (void)addElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
-                        element:(NSXMLElement *)aElement;
+                        element:(DDXMLElement *)aElement;
 
-- (void)setElementWithNamespace:(NSXMLNode *)namespace
+- (void)setElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
-                        element:(NSXMLElement *)aElement;
+                        element:(DDXMLElement *)aElement;
 
-- (void)addElementWithNamespace:(NSXMLNode *)namespace
+- (void)addElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
                     atomElement:(AtomElement *)atomElement;
 
-- (void)setElementWithNamespace:(NSXMLNode *)namespace
+- (void)setElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
                     atomElement:(AtomElement *)atomElement;
 
@@ -71,12 +72,12 @@
 
 - (NSString *)stringValue;
 
-- (NSArray *)getObjectsWithNamespace:(NSXMLNode *)namespace
+- (NSArray *)getObjectsWithNamespace:(DDXMLNode *)namespace
                          elementName:(NSString *)elementName
                                class:(Class)class
                          initializer:(SEL)initializer;
 
-- (id)getObjectWithNamespace:(NSXMLNode *)namespace
+- (id)getObjectWithNamespace:(DDXMLNode *)namespace
                  elementName:(NSString *)elementName
                        class:(Class)class
                  initializer:(SEL)initializer;

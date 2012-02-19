@@ -8,7 +8,7 @@
 }
 
 + (NSString *)elementName;
-+ (NSXMLNode *)elementNamespace;
++ (DDXMLNode *)elementNamespace;
 - (NSURL *)icon;
 - (void)setIcon:(NSURL *)icon;
 - (NSURL *)logo;

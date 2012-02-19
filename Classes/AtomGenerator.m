@@ -8,7 +8,7 @@
   return @"generator";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace atom ];
 }
 
@@ -16,7 +16,7 @@
   return [ [ [ AtomGenerator alloc ] init ] autorelease ];
 }
 
-+ (AtomGenerator *)generatorWithXMLElement:(NSXMLElement *)elem {
++ (AtomGenerator *)generatorWithXMLElement:(DDXMLElement *)elem {
   return [ [ [ AtomGenerator alloc ] initWithXMLElement:elem ] autorelease ];
 }
 

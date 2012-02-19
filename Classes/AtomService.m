@@ -8,7 +8,7 @@
   return @"service";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace app ];
 }
 
@@ -16,7 +16,7 @@
   return [ [ [ AtomService alloc ] init ] autorelease ];
 }
 
-+ (AtomService *)serviceWithXMLElement:(NSXMLElement *)elem {
++ (AtomService *)serviceWithXMLElement:(DDXMLElement *)elem {
   return [ [ [ AtomService alloc ] initWithXMLElement:elem ] autorelease ];
 }
 

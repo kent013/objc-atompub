@@ -8,7 +8,7 @@
   return @"author";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace atom ];
 }
 
@@ -16,7 +16,7 @@
   return [ [ [ AtomPerson alloc ] init ] autorelease ];
 }
 
-+ (AtomPerson *)personWithXMLElement:(NSXMLElement *)elem {
++ (AtomPerson *)personWithXMLElement:(DDXMLElement *)elem {
   return [ [ [ AtomPerson alloc ] initWithXMLElement:elem ] autorelease ];
 }
 

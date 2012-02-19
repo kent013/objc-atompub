@@ -8,7 +8,6 @@
   AtomCategories *cats = [ [ AtomCategories alloc ] init ];
   NSString *catsString = [ cats stringValue ];
   STAssertEqualObjects( catsString, @"<categories xmlns=\"http://www.w3.org/2007/app\"></categories>", nil );
-  [ cats release ];
 }
 
 - (void)testParams {

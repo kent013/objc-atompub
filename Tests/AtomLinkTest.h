@@ -1,4 +1,4 @@
-#import <SenTestingKit/SenTestingKit.h>;
+#import <SenTestingKit/SenTestingKit.h>
 
 @interface AtomLinkTest : SenTestCase {
 

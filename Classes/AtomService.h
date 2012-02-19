@@ -7,9 +7,9 @@
 
 }
 + (NSString *)elementName;
-+ (NSXMLNode *)elementNamespace;
++ (DDXMLNode *)elementNamespace;
 + (AtomService *)service;
-+ (AtomService *)serviceWithXMLElement:(NSXMLElement *)elem;
++ (AtomService *)serviceWithXMLElement:(DDXMLElement *)elem;
 + (AtomService *)serviceWithXMLString:(NSString *)string;
 - (AtomWorkspace *)workspace;
 - (NSArray *)workspaces;

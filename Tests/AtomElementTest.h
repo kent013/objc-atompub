@@ -7,8 +7,8 @@
 - (void)testAddingElement;
 - (void)testAddingMultipleElement;
 - (void)testAddingElementWithAttributes;
-- (void)testAddingNSXMLElement;
-- (void)testAddingComplexNSXMLElement;
+- (void)testAddingDDXMLElement;
+- (void)testAddingComplexDDXMLElement;
 - (void)testRemovingElement;
 - (void)testSettingElement;
 - (void)testGettingElements;

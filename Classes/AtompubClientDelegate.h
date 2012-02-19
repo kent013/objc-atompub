@@ -4,6 +4,7 @@
 @class AtompubClient;
 
 @protocol AtompubClientDelegate
+@optional
 - (void)clientDidReceiveService:(AtomService *)service;
 - (void)clientDidReceiveCategories:(AtomCategories *)categories;
 - (void)clientDidReceiveFeed:(AtomFeed *)feed;

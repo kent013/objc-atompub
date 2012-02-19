@@ -164,10 +164,10 @@
   int count = [ elements count ];
   int i;
   NSMutableArray *links = [ NSMutableArray array ];
-  NSXMLElement *elem;
-  NSXMLNode *attrRel, *attrHref;
+  DDXMLElement *elem;
+  DDXMLNode *attrRel, *attrHref;
   for (i = 0; i < count; i++) {
-    elem = (NSXMLElement *)[ elements objectAtIndex:i ];
+    elem = (DDXMLElement *)[ elements objectAtIndex:i ];
     attrRel = [ elem attributeForName:@"rel" ];
     attrHref = [ elem attributeForName:@"href" ];
     if ( attrRel  != nil
@@ -197,10 +197,10 @@
                          elementName:@"link" ];
   int count = [ tmp count ];
   int i;
-  NSXMLElement *elem;
-  NSXMLNode *rel;
+  DDXMLElement *elem;
+  DDXMLNode *rel;
   for (i = 0; i < count; i++) {
-    elem = (NSXMLElement *)[ tmp objectAtIndex:i ];
+    elem = (DDXMLElement *)[ tmp objectAtIndex:i ];
     rel = [ elem attributeForName:@"rel" ];
     if (!(rel != nil && [ [ rel stringValue ] isEqualToString:relType ]))
       [ self addElementWithNamespace:[ AtomNamespace atom ]
@@ -234,11 +234,11 @@
   int count = [ tmp count ];
   int i;
   NSMutableArray *links = [ NSMutableArray array ];
-  NSXMLElement *elem;
-  NSXMLNode *rel;
-  NSXMLNode *href;
+  DDXMLElement *elem;
+  DDXMLNode *rel;
+  DDXMLNode *href;
   for (i = 0; i < count; i++) {
-    elem = (NSXMLElement *)[ tmp objectAtIndex:i ];
+    elem = (DDXMLElement *)[ tmp objectAtIndex:i ];
     rel = [ elem attributeForName:@"rel" ];
     href = [ elem attributeForName:@"href" ];
     if ((rel == nil

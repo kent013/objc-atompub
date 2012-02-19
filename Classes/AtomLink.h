@@ -1,13 +1,13 @@
-#import <Foundation/Foundation.h>;
-#import "AtomElement.h";
+#import <Foundation/Foundation.h>
+#import "AtomElement.h"
 
 @interface AtomLink : AtomElement {
 
 }
 + (NSString *)elementName;
-+ (NSXMLNode *)elementNamespace;
++ (DDXMLNode *)elementNamespace;
 + (AtomLink *)link;
-+ (AtomLink *)linkWithXMLElement:(NSXMLElement *)elem;
++ (AtomLink *)linkWithXMLElement:(DDXMLElement *)elem;
 + (AtomLink *)linkWithXMLString:(NSString *)string;
 
 // @property NSString *rel, *type, *hreflang, *title;

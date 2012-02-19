@@ -1,6 +1,7 @@
 #import "AtomFeed.h"
 #import "AtomNamespace.h"
 #import "AtomEntry.h"
+#import "AtomGenerator.h"
 
 @implementation AtomFeed
 
@@ -8,7 +9,7 @@
   return @"feed";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace atom ];
 }
 
@@ -75,7 +76,7 @@
   NSString *results = 
     [ self getElementTextStringWithNamespace:[ AtomNamespace openSearch ]
                                  elementName:@"totalResults" ];
-  return (results != nil) ? [ results intValue ] : nil;
+  return (results != nil) ? [ results intValue ] : 0;
 }
 
 - (void)setTotalResults:(int)num {
@@ -88,7 +89,7 @@
   NSString *index = 
     [ self getElementTextStringWithNamespace:[ AtomNamespace openSearch ]
                                  elementName:@"startIndex" ];
-  return (index != nil) ? [ index intValue ] : nil;
+  return (index != nil) ? [ index intValue ] : 0;
 }
 
 - (void)setStartIndex:(int)num {
@@ -101,7 +102,7 @@
   NSString *page = 
     [ self getElementTextStringWithNamespace:[ AtomNamespace openSearch ]
                                  elementName:@"itemsPerPage" ];
-  return (page != nil) ? [ page intValue ] : nil;
+  return (page != nil) ? [ page intValue ] : 0;
 }
 
 - (void)setItemsPerPage:(int)num {

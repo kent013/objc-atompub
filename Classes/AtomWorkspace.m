@@ -10,7 +10,7 @@
   return @"workspace";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace app ];
 }
 
@@ -18,7 +18,7 @@
   return [ [ [ AtomWorkspace alloc ] init ] autorelease ];
 }
 
-+ (AtomWorkspace *)workspaceWithXMLElement:(NSXMLElement *)elem {
++ (AtomWorkspace *)workspaceWithXMLElement:(DDXMLElement *)elem {
   return [ [ [ AtomWorkspace alloc ] initWithXMLElement:elem ] autorelease ];
 }
 

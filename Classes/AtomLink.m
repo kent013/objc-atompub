@@ -1,5 +1,5 @@
-#import "AtomLink.h";
-#import "AtomNamespace.h";
+#import "AtomLink.h"
+#import "AtomNamespace.h"
 
 @implementation AtomLink
 
@@ -8,7 +8,7 @@
   return @"link"; 
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace atom ];
 }
 
@@ -16,12 +16,12 @@
   return [ [ [ AtomLink alloc ] init ] autorelease ];
 }
 
-+ (AtomLink *)linkWithXMLElement:(NSXMLElement *)elem {
++ (AtomLink *)linkWithXMLElement:(DDXMLElement *)elem {
   return [ [ [ AtomLink alloc ] initWithXMLElement:elem ] autorelease ];
 }
 
 + (AtomLink *)linkWithXMLString:(NSString *)string {
-  return [ [ [ AtomLink alloc ] initWithString:string ] autorelease ];
+  return [ [ [ AtomLink alloc ] initWithXMLString:string ] autorelease ];
 }
 
 - (NSURL *)href {
@@ -72,7 +72,7 @@
 
 - (int)length {
   NSString *length = [ self getAttributeValueForKey:@"length" ];
-  return (length != nil) ? [ length intValue ] : nil;
+  return (length != nil) ? [ length intValue ] : 0;
 }
 
 - (void)setLength:(int)length {

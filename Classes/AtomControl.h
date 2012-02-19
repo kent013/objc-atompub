@@ -6,9 +6,9 @@
 }
 
 + (NSString *)elementName;
-+ (NSXMLNode *)elementNamespace;
++ (DDXMLNode *)elementNamespace;
 + (AtomControl *)control;
-+ (AtomControl *)controlWithXMLElement:(NSXMLElement *)elem;
++ (AtomControl *)controlWithXMLElement:(DDXMLElement *)elem;
 + (AtomControl *)controlWithXMLString:(NSString *)string;
 
 // @property BOOL draft;

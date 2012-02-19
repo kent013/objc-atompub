@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79D0EC7314EFFFF700CDEF76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D0EC7214EFFFF700CDEF76 /* Foundation.framework */; };
+		79D0EC7914EFFFF700CDEF76 /* objc_atompub.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0EC7814EFFFF700CDEF76 /* objc_atompub.m */; };
+		79D0EC8114EFFFF700CDEF76 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D0EC8014EFFFF700CDEF76 /* SenTestingKit.framework */; };
+		79D0EC8314EFFFF700CDEF76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D0EC8214EFFFF700CDEF76 /* UIKit.framework */; };
+		79D0EC8414EFFFF700CDEF76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D0EC7214EFFFF700CDEF76 /* Foundation.framework */; };
+		79D0EC8714EFFFF700CDEF76 /* libobjc-atompub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D0EC6F14EFFFF700CDEF76 /* libobjc-atompub.a */; };
+		79D0EC8D14EFFFF700CDEF76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79D0EC8B14EFFFF700CDEF76 /* InfoPlist.strings */; };
+		79D0EC9014EFFFF700CDEF76 /* objc_atompubTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79D0EC8F14EFFFF700CDEF76 /* objc_atompubTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79D0EC8514EFFFF700CDEF76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79D0EC6614EFFFF700CDEF76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79D0EC6E14EFFFF700CDEF76;
+			remoteInfo = "objc-atompub";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		79D0EC6F14EFFFF700CDEF76 /* libobjc-atompub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libobjc-atompub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D0EC7214EFFFF700CDEF76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		79D0EC7614EFFFF700CDEF76 /* objc-atompub-Prefix.pch */ = {isa = PBXFileReference; path = "objc-atompub-Prefix.pch"; sourceTree = "<group>"; };
+		79D0EC7714EFFFF700CDEF76 /* objc_atompub.h */ = {isa = PBXFileReference; path = objc_atompub.h; sourceTree = "<group>"; };
+		79D0EC7814EFFFF700CDEF76 /* objc_atompub.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objc_atompub.m; sourceTree = "<group>"; };
+		79D0EC7F14EFFFF700CDEF76 /* objc-atompubTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "objc-atompubTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D0EC8014EFFFF700CDEF76 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		79D0EC8214EFFFF700CDEF76 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		79D0EC8A14EFFFF700CDEF76 /* objc-atompubTests-Info.plist */ = {isa = PBXFileReference; path = "objc-atompubTests-Info.plist"; sourceTree = "<group>"; };
+		79D0EC8C14EFFFF700CDEF76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		79D0EC8E14EFFFF700CDEF76 /* objc_atompubTests.h */ = {isa = PBXFileReference; path = objc_atompubTests.h; sourceTree = "<group>"; };
+		79D0EC8F14EFFFF700CDEF76 /* objc_atompubTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objc_atompubTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79D0EC6C14EFFFF700CDEF76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D0EC7314EFFFF700CDEF76 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D0EC7B14EFFFF700CDEF76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D0EC8114EFFFF700CDEF76 /* SenTestingKit.framework in Frameworks */,
+				79D0EC8314EFFFF700CDEF76 /* UIKit.framework in Frameworks */,
+				79D0EC8414EFFFF700CDEF76 /* Foundation.framework in Frameworks */,
+				79D0EC8714EFFFF700CDEF76 /* libobjc-atompub.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79D0EC6414EFFFF700CDEF76 = {
+			isa = PBXGroup;
+			children = (
+				79D0EC7414EFFFF700CDEF76 /* objc-atompub */,
+				79D0EC8814EFFFF700CDEF76 /* objc-atompubTests */,
+				79D0EC7114EFFFF700CDEF76 /* Frameworks */,
+				79D0EC7014EFFFF700CDEF76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79D0EC7014EFFFF700CDEF76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79D0EC6F14EFFFF700CDEF76 /* libobjc-atompub.a */,
+				79D0EC7F14EFFFF700CDEF76 /* objc-atompubTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79D0EC7114EFFFF700CDEF76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79D0EC7214EFFFF700CDEF76 /* Foundation.framework */,
+				79D0EC8014EFFFF700CDEF76 /* SenTestingKit.framework */,
+				79D0EC8214EFFFF700CDEF76 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79D0EC7414EFFFF700CDEF76 /* objc-atompub */ = {
+			isa = PBXGroup;
+			children = (
+				79D0EC7714EFFFF700CDEF76 /* objc_atompub.h */,
+				79D0EC7814EFFFF700CDEF76 /* objc_atompub.m */,
+				79D0EC7514EFFFF700CDEF76 /* Supporting Files */,
+			);
+			path = "objc-atompub";
+			sourceTree = "<group>";
+		};
+		79D0EC7514EFFFF700CDEF76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79D0EC7614EFFFF700CDEF76 /* objc-atompub-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79D0EC8814EFFFF700CDEF76 /* objc-atompubTests */ = {
+			isa = PBXGroup;
+			children = (
+				79D0EC8E14EFFFF700CDEF76 /* objc_atompubTests.h */,
+				79D0EC8F14EFFFF700CDEF76 /* objc_atompubTests.m */,
+				79D0EC8914EFFFF700CDEF76 /* Supporting Files */,
+			);
+			path = "objc-atompubTests";
+			sourceTree = "<group>";
+		};
+		79D0EC8914EFFFF700CDEF76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79D0EC8A14EFFFF700CDEF76 /* objc-atompubTests-Info.plist */,
+				79D0EC8B14EFFFF700CDEF76 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		79D0EC6D14EFFFF700CDEF76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		79D0EC6E14EFFFF700CDEF76 /* objc-atompub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79D0EC9314EFFFF700CDEF76 /* Build configuration list for PBXNativeTarget "objc-atompub" */;
+			buildPhases = (
+				79D0EC6B14EFFFF700CDEF76 /* Sources */,
+				79D0EC6C14EFFFF700CDEF76 /* Frameworks */,
+				79D0EC6D14EFFFF700CDEF76 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "objc-atompub";
+			productName = "objc-atompub";
+			productReference = 79D0EC6F14EFFFF700CDEF76 /* libobjc-atompub.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		79D0EC7E14EFFFF700CDEF76 /* objc-atompubTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79D0EC9614EFFFF700CDEF76 /* Build configuration list for PBXNativeTarget "objc-atompubTests" */;
+			buildPhases = (
+				79D0EC7A14EFFFF700CDEF76 /* Sources */,
+				79D0EC7B14EFFFF700CDEF76 /* Frameworks */,
+				79D0EC7C14EFFFF700CDEF76 /* Resources */,
+				79D0EC7D14EFFFF700CDEF76 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79D0EC8614EFFFF700CDEF76 /* PBXTargetDependency */,
+			);
+			name = "objc-atompubTests";
+			productName = "objc-atompubTests";
+			productReference = 79D0EC7F14EFFFF700CDEF76 /* objc-atompubTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79D0EC6614EFFFF700CDEF76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 79D0EC6914EFFFF700CDEF76 /* Build configuration list for PBXProject "objc-atompub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 79D0EC6414EFFFF700CDEF76;
+			productRefGroup = 79D0EC7014EFFFF700CDEF76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79D0EC6E14EFFFF700CDEF76 /* objc-atompub */,
+				79D0EC7E14EFFFF700CDEF76 /* objc-atompubTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79D0EC7C14EFFFF700CDEF76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D0EC8D14EFFFF700CDEF76 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79D0EC7D14EFFFF700CDEF76 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79D0EC6B14EFFFF700CDEF76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D0EC7914EFFFF700CDEF76 /* objc_atompub.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D0EC7A14EFFFF700CDEF76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D0EC9014EFFFF700CDEF76 /* objc_atompubTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79D0EC8614EFFFF700CDEF76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79D0EC6E14EFFFF700CDEF76 /* objc-atompub */;
+			targetProxy = 79D0EC8514EFFFF700CDEF76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		79D0EC8B14EFFFF700CDEF76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79D0EC8C14EFFFF700CDEF76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79D0EC9114EFFFF700CDEF76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		79D0EC9214EFFFF700CDEF76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79D0EC9414EFFFF700CDEF76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/objc_atompub.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-atompub/objc-atompub-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		79D0EC9514EFFFF700CDEF76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/objc_atompub.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-atompub/objc-atompub-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		79D0EC9714EFFFF700CDEF76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-atompub/objc-atompub-Prefix.pch";
+				INFOPLIST_FILE = "objc-atompubTests/objc-atompubTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		79D0EC9814EFFFF700CDEF76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-atompub/objc-atompub-Prefix.pch";
+				INFOPLIST_FILE = "objc-atompubTests/objc-atompubTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79D0EC6914EFFFF700CDEF76 /* Build configuration list for PBXProject "objc-atompub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D0EC9114EFFFF700CDEF76 /* Debug */,
+				79D0EC9214EFFFF700CDEF76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79D0EC9314EFFFF700CDEF76 /* Build configuration list for PBXNativeTarget "objc-atompub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D0EC9414EFFFF700CDEF76 /* Debug */,
+				79D0EC9514EFFFF700CDEF76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		79D0EC9614EFFFF700CDEF76 /* Build configuration list for PBXNativeTarget "objc-atompubTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D0EC9714EFFFF700CDEF76 /* Debug */,
+				79D0EC9814EFFFF700CDEF76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79D0EC6614EFFFF700CDEF76 /* Project object */;
+}

@@ -415,6 +415,7 @@ didReceiveResponse:(NSURLResponse *)response {
       [ self handleResponseForPuttingOrDeletingResourceWithDispatcher:
         @selector(clientDidDeleteMedia) ];
       break;
+      default: break;
   }
 }
 
@@ -458,9 +459,9 @@ didReceiveResponse:(NSURLResponse *)response {
                          description:@"Location not found." ];
 
     //gen entry
-    NSXMLDocument *doc =
-      [ [ NSXMLDocument alloc ] initWithData:responseData
-                                     options:NSXMLNodeOptionsNone
+    DDXMLDocument *doc =
+      [ [ DDXMLDocument alloc ] initWithData:responseData
+                                     options:DDXMLNodeOptionsNone
                                        error:nil ];
     if (doc == nil) {
       [ self dispatchErrorWithStatus:status
@@ -503,9 +504,9 @@ didReceiveResponse:(NSURLResponse *)response {
       [ cacheStorage setCache:newCache
                        forURL:lastRequestURL ];
     }
-    NSXMLDocument *doc =
-      [ [ NSXMLDocument alloc ] initWithData:responseData
-                                     options:NSXMLNodeOptionsNone
+    DDXMLDocument *doc =
+      [ [ DDXMLDocument alloc ] initWithData:responseData
+                                     options:DDXMLNodeOptionsNone
                                        error:nil ];
     if (doc == nil) {
       [ self dispatchErrorWithStatus:status
@@ -524,9 +525,9 @@ didReceiveResponse:(NSURLResponse *)response {
                          description:@"Couldn't found proper cache resource." ];
     } else {
       NSData *resource = [ cache resource ];
-      NSXMLDocument *cachedDoc =
-        [ [ NSXMLDocument alloc ] initWithData:resource
-                                       options:NSXMLNodeOptionsNone
+      DDXMLDocument *cachedDoc =
+        [ [ DDXMLDocument alloc ] initWithData:resource
+                                       options:DDXMLNodeOptionsNone
                                          error:nil ];
       if (cachedDoc == nil) {
         [ self dispatchErrorWithStatus:status
@@ -604,9 +605,9 @@ didReceiveResponse:(NSURLResponse *)response {
     //if (![ type isEqualToString:@"application/atomsvc+xml" ])
     if (![ type isEqualToString:aType ])
       NSLog(@"Bad Content-Type: %@", type);
-    NSXMLDocument *doc =
-      [ [ NSXMLDocument alloc ] initWithData:responseData
-                                     options:NSXMLNodeOptionsNone
+    DDXMLDocument *doc =
+      [ [ DDXMLDocument alloc ] initWithData:responseData
+                                     options:DDXMLNodeOptionsNone
                                        error:nil ];
     if (doc == nil) {
       [ self dispatchErrorWithStatus:status

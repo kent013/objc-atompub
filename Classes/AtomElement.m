@@ -7,14 +7,14 @@
   return @"element";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace atom ];
 }
 
 - (id)init {
   if ((self = [ super init ]) != nil) {
     element =
-      [ [ NSXMLElement alloc ] initWithName:
+      [ [ DDXMLElement alloc ] initWithName:
         [ [ self class ] elementName ] ];
     [ element addNamespace:
       [ [ self class ] elementNamespace ] ];
@@ -22,7 +22,7 @@
   return self;
 }
 
-- (id)initWithXMLElement:(NSXMLElement *)elem {
+- (id)initWithXMLElement:(DDXMLElement *)elem {
   if ((self = [ super init ]) != nil) {
     element = [ elem retain ];
   }
@@ -32,20 +32,20 @@
 - (id)initWithXMLString:(NSString *)string {
   if ((self = [ super init ]) != nil) {
     element =
-      [ [ NSXMLElement alloc ] initWithXMLString:string
+      [ [ DDXMLElement alloc ] initWithXMLString:string
                                            error:nil ];
   }
   return self;
 }
 
-- (NSXMLDocument *)document {
-  NSXMLDocument *doc = 
-    [ [ [ NSXMLDocument alloc ] initWithRootElement: [ element copy ] ]
+- (DDXMLDocument *)document {
+  DDXMLDocument *doc = 
+    [ [ [ DDXMLDocument alloc ] initWithRootElement: [ element copy ] ]
       autorelease ];
   return doc;
 }
 
-- (void)addElementWithNamespace:(NSXMLNode *)namespace
+- (void)addElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
                           value:(NSString *)value {
   [ self addElementWithNamespace:namespace
@@ -53,21 +53,21 @@
                           value:value
                      attributes:nil];
 }
-- (void)addElementWithNamespace:(NSXMLNode *)namespace
+- (void)addElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
                           value:(NSString *)value
                      attributes:(NSDictionary *)attributes {
-  NSXMLElement *aElement =
-    [ NSXMLElement elementWithName: elementName ];
+  DDXMLElement *aElement =
+    [ DDXMLElement elementWithName: elementName ];
   [ aElement addNamespace: namespace ];
-  NSXMLNode *textNode = [ NSXMLNode textWithStringValue: value ];
+  DDXMLNode *textNode = [ DDXMLNode textWithStringValue: value ];
   [ aElement addChild: textNode ];
   if (attributes != nil) {
     NSEnumerator *enumerator = [ attributes keyEnumerator ];
     NSString *attrKey, *attrValue;
     while ((attrKey = (NSString *)[enumerator nextObject]) != nil) {
       attrValue = (NSString *)[ attributes objectForKey:attrKey ];
-      NSXMLNode *attr = [ NSXMLNode attributeWithName:attrKey
+      DDXMLNode *attr = [ DDXMLNode attributeWithName:attrKey
                                           stringValue:attrValue ];
       [ element addAttribute:attr ];
       [ attrKey release ];
@@ -76,31 +76,31 @@
   [ element addChild: aElement ];
 }
 
-- (void)addElementWithNamespace:(NSXMLNode *)namespace
+- (void)addElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
                     atomElement:(AtomElement *)atomElement {
   [ self addElementWithNamespace:namespace
                      elementName:elementName
                          element:[ atomElement element ] ];
 }
-- (void)addElementWithNamespace:(NSXMLNode *)namespace
+- (void)addElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
-                        element:(NSXMLElement *)aElement {
-  NSXMLElement *newElement =
-    [ NSXMLElement elementWithName:elementName ];
+                        element:(DDXMLElement *)aElement {
+  DDXMLElement *newElement =
+    [ DDXMLElement elementWithName:elementName ];
   [ newElement addNamespace:namespace ];
   int i;
   int count = [ aElement childCount ];
-  NSXMLNode *child;
+  DDXMLNode *child;
   for (i = 0; i < count; i++) {
     child = [ aElement childAtIndex:i ];
     switch ([ child kind ]) {
-      case NSXMLElementKind:
+      case DDXMLElementKind:
         [ newElement addChild:[ child copy ] ];
         break;
-      case NSXMLTextKind:
+      case DDXMLTextKind:
         [ newElement addChild:
-          [ NSXMLNode textWithStringValue:[ child stringValue ] ] ];
+          [ DDXMLNode textWithStringValue:[ child stringValue ] ] ];
         break;
     }
   }
@@ -108,12 +108,12 @@
   count = [ attributes count ];
   for (i = 0; i < count; i++) {
     [ newElement addAttribute:
-      [ (NSXMLNode *)[ attributes objectAtIndex:i ] copy ] ];
+      [ (DDXMLNode *)[ attributes objectAtIndex:i ] copy ] ];
   }
   [ element addChild:newElement ];
 }
 
-- (void)removeElementsWithNamespace:(NSXMLNode *)namespace
+- (void)removeElementsWithNamespace:(DDXMLNode *)namespace
                         elementName:(NSString *)elementName {
   /*
   NSArray *elements =
@@ -124,13 +124,13 @@
   int i;
   int count = [ elements count ];
   for (i = 0; i < count; i++) {
-    [ (NSXMLElement *)[ elements objectAtIndex:i ] detach ];
+    [ (DDXMLElement *)[ elements objectAtIndex:i ] detach ];
   }
   */
   int i = 0;
   while ( i < [ element childCount ] ) {
-    NSXMLNode *child = [ element childAtIndex:i ];
-    if ( [child kind ] == NSXMLElementKind
+    DDXMLNode *child = [ element childAtIndex:i ];
+    if ( [child kind ] == DDXMLElementKind
       && [ [ child localName ] isEqualToString:elementName ]
       && [ [ child URI ] isEqualToString:[ namespace stringValue ] ]) {
       [ element removeChildAtIndex:i ];
@@ -140,7 +140,7 @@
   }
 }
 
-- (void)setElementWithNamespace:(NSXMLNode *)namespace
+- (void)setElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
                           value:(NSString *)value {
   [ self removeElementsWithNamespace:namespace
@@ -150,9 +150,9 @@
                            value:value ];
 }
 
-- (void)setElementWithNamespace:(NSXMLNode *)namespace
+- (void)setElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
-                        element:(NSXMLElement *)aElement {
+                        element:(DDXMLElement *)aElement {
   [ self removeElementsWithNamespace:namespace
                          elementName:elementName ];
   [ self addElementWithNamespace:namespace
@@ -160,7 +160,7 @@
                          element:aElement ];
 }
 
-- (void)setElementWithNamespace:(NSXMLNode *)namespace
+- (void)setElementWithNamespace:(DDXMLNode *)namespace
                     elementName:(NSString *)elementName
                     atomElement:(AtomElement *)atomElement {
   [ self removeElementsWithNamespace:namespace
@@ -170,7 +170,7 @@
                      atomElement:atomElement ];
 }
 
-- (NSXMLElement *)getElementWithNamespace:(NSXMLNode *)namespace
+- (DDXMLElement *)getElementWithNamespace:(DDXMLNode *)namespace
                               elementName:(NSString *)elementName {
   NSArray *elements =
     [ self getElementsWithNamespace:namespace 
@@ -181,7 +181,7 @@
     return nil;
 }
 
-- (NSArray *)getElementsWithNamespace:(NSXMLNode *)namespace
+- (NSArray *)getElementsWithNamespace:(DDXMLNode *)namespace
                           elementName:(NSString *)elementName {
   NSArray *elements =
     [ element elementsForLocalName:elementName
@@ -189,7 +189,7 @@
   return elements;
 }
 
-- (NSArray *)getElementsTextStringWithNamespace:(NSXMLNode *)namespace
+- (NSArray *)getElementsTextStringWithNamespace:(DDXMLNode *)namespace
                                     elementName:(NSString *)elementName {
   NSArray *elements =
     [ self getElementsWithNamespace:namespace
@@ -198,31 +198,31 @@
   int count = [ elements count ];
   NSMutableArray *texts = [ NSMutableArray arrayWithCapacity:count ];
   for (i = 0; i < count; i++) {
-    [ texts addObject: [ (NSXMLElement *)[ elements objectAtIndex:i ] stringValue ] ];
+    [ texts addObject: [ (DDXMLElement *)[ elements objectAtIndex:i ] stringValue ] ];
   }
   return texts;
 }
-- (NSString *)getElementTextStringWithNamespace:(NSXMLNode *)namespace
+- (NSString *)getElementTextStringWithNamespace:(DDXMLNode *)namespace
                                     elementName:(NSString *)elementName {
-  NSXMLElement *elem =  [ self getElementWithNamespace:namespace
+  DDXMLElement *elem =  [ self getElementWithNamespace:namespace
                                            elementName:elementName ];
   return (elem != nil) ? [ elem stringValue ] : nil;
 }
 
 - (NSString *)getAttributeValueForKey:(NSString *)key {
-  NSXMLNode *attribute = [ element attributeForName:key ];
+  DDXMLNode *attribute = [ element attributeForName:key ];
   return (attribute != nil) ? [ attribute stringValue ] : nil;
 }
 
 - (void)setAttributeValue:(NSString *)value
                  forKey:(NSString *)key {
   [ element addAttribute:
-    [ NSXMLNode attributeWithName:key
+    [ DDXMLNode attributeWithName:key
                       stringValue:value ] ];
 }
 
 // @synthesize element;
-- (NSXMLElement *)element {
+- (DDXMLElement *)element {
   return [ [ element retain ] autorelease ];
 }
 
@@ -236,7 +236,7 @@
                                   encoding:NSUTF8StringEncoding ];
 }
 
-- (NSArray *)getObjectsWithNamespace:(NSXMLNode *)namespace
+- (NSArray *)getObjectsWithNamespace:(DDXMLNode *)namespace
                          elementName:(NSString *)elementName
                                class:(Class)class
                          initializer:(SEL)initializer {
@@ -247,16 +247,16 @@
   NSMutableArray *filtered = [ NSMutableArray arrayWithCapacity:count ];
   for (i = 0; i < count; i++) {
     [ filtered addObject:[ class performSelector:initializer
-                                      withObject:(NSXMLElement *)[ list objectAtIndex:i ] ] ];
+                                      withObject:(DDXMLElement *)[ list objectAtIndex:i ] ] ];
   }
   return filtered;
 }
 
-- (id)getObjectWithNamespace:(NSXMLNode *)namespace
+- (id)getObjectWithNamespace:(DDXMLNode *)namespace
                  elementName:(NSString *)elementName
                        class:(Class)class
                  initializer:(SEL)initializer {
-  NSXMLElement *elem = [ self getElementWithNamespace:namespace
+  DDXMLElement *elem = [ self getElementWithNamespace:namespace
                                           elementName:elementName ];
   return [ class performSelector:initializer
                       withObject:elem ];

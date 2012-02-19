@@ -5,9 +5,9 @@
 
 }
 + (NSString *)elementName;
-+ (NSXMLNode *)elementNamespace;
++ (DDXMLNode *)elementNamespace;
 + (AtomPerson *)person;
-+ (AtomPerson *)personWithXMLElement:(NSXMLElement *)elem;
++ (AtomPerson *)personWithXMLElement:(DDXMLElement *)elem;
 + (AtomPerson *)personWithXMLString:(NSString *)string;
 
 // @property NSString *email, *name;

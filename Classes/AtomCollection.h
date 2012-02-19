@@ -7,9 +7,9 @@
 
 }
 + (NSString *)elementName;
-+ (NSXMLNode *)elementNamespace;
++ (DDXMLNode *)elementNamespace;
 + (AtomCollection *)collection;
-+ (AtomCollection *)collectionWithXMLElement:(NSXMLElement *)elem;
++ (AtomCollection *)collectionWithXMLElement:(DDXMLElement *)elem;
 + (AtomCollection *)collectionWithXMLString:(NSString *)string;
 // @property NSString *title;
 - (NSString *)title;

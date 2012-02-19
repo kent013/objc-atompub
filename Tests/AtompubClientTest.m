@@ -14,7 +14,7 @@
 - (void)testClient {
   client = [ AtompubClient client ];
   [ client setAgentName:@"MyAgent" ];
-  [ client setDelegate:self ];
+    [ client setDelegate:self ];
   BasicCredential *cred = [ BasicCredential credentialWithUsername:@"" password:@"" ];
   [ client setCredential:cred ];
   [ client startLoadingServiceWithURL:[ NSURL URLWithString:@"http://teahut.sakura.ne.jp:3000/service/" ] ];

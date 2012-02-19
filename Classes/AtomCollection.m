@@ -10,7 +10,7 @@
   return @"collection";
 }
 
-+ (NSXMLNode *)elementNamespace {
++ (DDXMLNode *)elementNamespace {
   return [ AtomNamespace app ];
 }
 
@@ -18,7 +18,7 @@
   return [ [ [ AtomCollection alloc ] init ] autorelease ];
 }
 
-+ (AtomCollection *)collectionWithXMLElement:(NSXMLElement *)elem {
++ (AtomCollection *)collectionWithXMLElement:(DDXMLElement *)elem {
   return [ [ [ AtomCollection alloc ] initWithXMLElement:elem ] autorelease ];
 }
 

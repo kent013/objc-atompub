@@ -7,9 +7,9 @@
 
 }
 + (NSString *)elementName;
-+ (NSXMLNode *)elementNamespace;
++ (DDXMLNode *)elementNamespace;
 + (AtomEntry *)entry;
-+ (AtomEntry *)entryWithXMLElement:(NSXMLElement *)elem;
++ (AtomEntry *)entryWithXMLElement:(DDXMLElement *)elem;
 + (AtomEntry *)entryWithXMLString:(NSString *)string;
 - (NSString *)summary;
 - (void)setSummary:(NSString *)summary;

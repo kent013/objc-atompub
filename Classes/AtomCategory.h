@@ -5,9 +5,9 @@
 
 }
 + (NSString *)elementName;
-+ (NSXMLNode *)elementNamespace;
++ (DDXMLNode *)elementNamespace;
 + (AtomCategory *)category;
-+ (AtomCategory *)categoryWithXMLElement:(NSXMLElement *)elem;
++ (AtomCategory *)categoryWithXMLElement:(DDXMLElement *)elem;
 + (AtomCategory *)categoryWithXMLString:(NSString *)string;
 
 // @property NSString *term, *label, *scheme;

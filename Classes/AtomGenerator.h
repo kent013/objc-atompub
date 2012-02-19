@@ -5,9 +5,9 @@
 
 }
 + (NSString *)elementName;
-+ (NSXMLNode *)elementNamespace;
++ (DDXMLNode *)elementNamespace;
 + (AtomGenerator *)generator;
-+ (AtomGenerator *)generatorWithXMLElement:(NSXMLElement *)elem;
++ (AtomGenerator *)generatorWithXMLElement:(DDXMLElement *)elem;
 + (AtomGenerator *)generatorWithXMLString:(NSString *)string;
 
 // @property NSString *name, *version;
