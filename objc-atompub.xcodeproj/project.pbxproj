@@ -734,7 +734,7 @@
 				GCC_PREFIX_HEADER = "objc-atompub/objc-atompub-Prefix.pch";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Debug;
 		};
@@ -746,7 +746,7 @@
 				GCC_PREFIX_HEADER = "objc-atompub/objc-atompub-Prefix.pch";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 			};
 			name = Release;
 		};

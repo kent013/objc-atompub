@@ -4,35 +4,37 @@
 #define defaultTimeoutInterval 60.0
 
 typedef enum {
-  None,
-  GettingService,
-  GettingCategories,
-  GettingFeed,
-  GettingEntry,
-  GettingMedia,
-  PostingEntry,
-  PostingMedia,
-  PuttingEntry,
-  PuttingMedia,
-  DeletingEntry,
-  DeletingMedia
+    None,
+    GettingService,
+    GettingCategories,
+    GettingFeed,
+    GettingEntry,
+    GettingMedia,
+    PostingEntry,
+    PostingMedia,
+    PuttingEntry,
+    PuttingMedia,
+    DeletingEntry,
+    DeletingMedia
 } AtompubClientFetchMode;
 
 @class AtompubCacheStorage, AtomEntry;
 @protocol AtompubClientDelegate;
 
 @interface AtompubClient : NSObject {
-  NSObject <AtompubCredential> *credential;
-  NSObject <AtompubClientDelegate> *delegate;
-  NSTimeInterval timeoutInterval;
-  NSString *agentName;
-  AtompubClientFetchMode fetchMode;
-  NSMutableData *responseData;
-  NSHTTPURLResponse *lastResponse;
-  NSURLConnection *connection;
-  AtompubCacheStorage *cacheStorage;
-  NSURL *lastRequestURL;
+    NSObject <AtompubCredential> *credential;
+    NSObject <AtompubClientDelegate> *delegate;
+    NSTimeInterval timeoutInterval;
+    NSString *agentName;
+    AtompubClientFetchMode fetchMode;
+    NSMutableData *responseData;
+    NSHTTPURLResponse *lastResponse;
+    NSURLConnection *connection;
+    AtompubCacheStorage *cacheStorage;
+    NSURL *lastRequestURL;
 }
+
+@property(nonatomic, assign) NSString* tag;
 
 + (AtompubClient *)client;
 - (id)init;
@@ -100,7 +102,7 @@ didReceiveResponse:(NSURLResponse *)response;
                                 mode:(AtompubClientFetchMode)mode;
 - (void)handleResponseWithType:(NSString *)aType
                     dispatcher:(SEL)dispatcher
-                         class:(Class)class;
+class:(Class)class;
 - (void)handleResponseForGettingEntry;
 - (void)handleResponseForGettingMedia;
 - (void)handleResponseForPostingResourceWithDispatcher:(SEL)dispatcher;
